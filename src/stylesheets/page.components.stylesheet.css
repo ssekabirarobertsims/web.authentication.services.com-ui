@@ -1,0 +1,618 @@
+section[class="create-service-page-component-wrapper"] {
+    min-height: 200vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] {
+    min-height: 200vh;
+    width: min(86%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .2em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > p {
+    color: hsl(0, 0%, 20%);
+    max-width: 60em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form {
+    min-height: 100vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
+    min-height: 10vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input[type="text"] {
+   height: 4em;
+   width: min(90%, 57em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input[type="email"] {
+   height: 4em;
+   width: min(90%, 57em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input[type="password"] {
+   height: 4em;
+   width: min(90%, 57em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input:is(:focus) {
+   border: 2px solid var(--primary-color);
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) textarea:is(:focus) {
+   border: 2px solid var(--primary-color);
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) textarea {
+   height: 10em;
+   width: min(90%, 57em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form .agreement-wrapper {
+    min-height: 3em;
+    width: min(100%, 100%);
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1em;
+ }
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form .agreement-wrapper :is(input[type="checkbox"]) {
+    min-height: 1.2em;
+    width: 1.2em;
+    border: 1px solid hsl(0, 0%, 70%);
+    cursor: pointer;
+ }
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form .agreement-wrapper :is(label) {
+    cursor: pointer;
+    font-size: .9em;
+    max-width: 50em;
+ }
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) {
+   height: 5em;
+   width: min(90%, 47em);
+   outline-style: none;
+   background-color: hsl(216, 100%, 95%);
+   border-radius: .2em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) div {
+   height: 5em;
+   width: min(95%, 95%);
+   outline-style: none;
+   background-color: hsl(216, 100%, 95%);
+   border-radius: .2em;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   color: #000;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button) {
+   height: 4em;
+   width: min(95%, 15em);
+   border: none;
+   border-radius: .3em;
+   background-color: var(--primary-color);
+   color: #fff;
+   cursor: pointer;
+   position: relative;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button)::before {
+    content: "Create Service";
+   height: 4em;
+   width: 0em;
+   background-color: #fff;
+   position: absolute;
+   border-radius: .3em;
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+   overflow: hidden;
+   color: var(--primary-color);
+   border: 2px solid var(--primary-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button):is(:hover)::before {
+    width: 15em;
+     transition: all 200ms;
+     transform-origin: left;
+     transition-timing-function: linear;
+     transition-behavior: smooth;
+ }
+
+
+/*  */
+section[class="log-into-service-page-component-wrapper"] {
+    min-height: 130vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] {
+    min-height: 110vh;
+    width: min(86%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .2em;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > p {
+    color: hsl(0, 0%, 20%);
+    max-width: 60em;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > p a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form {
+    min-height: 40vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
+    min-height: 10vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input {
+   height: 4em;
+   width: min(90%, 56em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) input:is(:focus) {
+    border: 2px solid var(--primary-color);
+ }
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) textarea {
+   height: 10em;
+   width: min(90%, 50em);
+   /* border: none; */
+   border: 1px solid hsl(0, 0%, 80%);
+   outline-style: none;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: .2em;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) {
+   height: 5em;
+   width: min(90%, 47em);
+   outline-style: none;
+   background-color: hsl(216, 100%, 95%);
+   border-radius: .2em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) div {
+   height: 5em;
+   width: min(95%, 95%);
+   outline-style: none;
+   background-color: hsl(216, 100%, 95%);
+   border-radius: .2em;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   color: #000;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button) {
+   height: 4em;
+   width: min(95%, 15em);
+   border: none;
+   border-radius: .3em;
+   background-color: var(--primary-color);
+   color: #fff;
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button)::before {
+    content: "Log Into Service";
+   height: 4em;
+   width: 0em;
+   background-color: #fff;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+   border-radius: .3em;
+   overflow: hidden;
+   color: var(--primary-color);
+   border: 2px solid var(--primary-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(button):is(:hover)::before {
+   width: 15em;
+    transition: all 200ms;
+    transform-origin: left;
+    transition-timing-function: linear;
+    transition-behavior: smooth;
+}
+
+/*  */
+section[class="dashboard-page-component-wrapper"] {
+    min-height: 290vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] {
+    min-height: 280vh;
+    width: min(86%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .2em;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > h1 {
+    font-size: 1.7em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p {
+    color: hsl(0, 0%, 20%);
+    max-width: 60em;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] {
+    min-height: 25vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+    background-color: transparent;
+    border-radius: .3em;
+    background-color: hsl(120, 100%, 90%);
+    /* border: 1px solid hsl(0, 100%, 50%); */
+}
+section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div {
+    min-height: 22vh;
+    width: min(95%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .7em;
+    background-color: transparent;
+}
+section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(h1) {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+}
+section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(p) {
+    font-size: .9em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+}
+section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(button) {
+    height: 3em;
+    width: 8em;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: not-allowed;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] {
+    min-height: 130vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: transparent;
+    border-radius: .3em;
+    border: 1px solid hsl(0, 0%, 80%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside {
+    min-height: 12vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: hsl(0, 0%, 96%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) {
+    min-height: 12vh;
+    width: min(95%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul {
+    min-height: 30vh;
+    width: min(95%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .4em;
+    /* border: 1px solid red; */
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) {
+    height: 12vh;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    gap: .0em;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) div {
+    height: 12vh;
+    width: min(100%, 33em);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    gap: .0em;
+    overflow: hidden;
+    flex-grow: 1;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button {
+    height: 3em;
+    width: 3em;
+    border: none;
+    background-color: transparent;
+    color: #101010;
+    cursor: pointer;
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button:is(:hover, :focus) {
+    background-color: hsl(0, 0%, 95%);
+}
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) {
+    height: 6em;
+    width: min(100%, 100%);
+    outline-style: none;
+    background-color: hsl(0, 100%, 95%);
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) div {
+    height: 5em;
+    width: min(95%, 95%);
+    outline-style: none;
+    border-radius: .2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000;
+ }
+ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
+   height: 20em;
+   width: min(100%, 100%);
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid hsl(0, 0%, 80%);
+    gap: .0em;
+    /* background-color: hsl(0, 0%, 90%); */
+    border-radius: .3em;
+ }
+ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] {
+   height: 17em;
+   width: min(97%, 97%);
+   display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5em;
+    /* border: 1px solid red; */
+ }
+ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] > h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+ }
+ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(button) {
+    height: 3.3em;
+    width: min(95%, 10em);
+    outline-style: none;
+    border-radius: .3em;
+    border: none;
+    background-color: hsl(0, 100%, 32%);
+    color: #fff;
+    cursor: pointer;
+ }
+
+ /*  */
+ section[class="offline-page-component"] {
+    min-height: 88vh;
+    width: min(100%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1em;
+ }
+ section[class="offline-page-component"] img {
+    min-height: 20em;
+    width: min(100%, 20em);
+ }
+
+ /*  */
+section[class="guide-page-component"] {
+    min-height: 290vh;
+    width: min(100%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+section[class="guide-page-component"] > article {
+    min-height: 280vh;
+    width: min(90%, 90%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .5em;
+    /* border: 1px solid red; */
+}
+section[class="guide-page-component"] > article :is(a) {
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--primary-color);
+    text-decoration-line: none;
+    text-decoration-color: none;
+}
+section[class="guide-page-component"] > article :is(h1) {
+    font-size: 1.8em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+}
+section[class="guide-page-component"] > article :is(p) {
+    font-size: 1em;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+    max-width: 70em;
+}
+section[class="guide-page-component"] > article :is(div[class="codes"]) {
+    height: 12em;
+    width: min(100%, 40em);
+    border: 1px solid hsl(0, 0%, 80%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: .3em;
+    border-radius: .5em;
+    background-color: hsl(0, 0%, 20%);
+}
+section[class="guide-page-component"] > article :is(div[class="codes"]) > span {
+    font-weight: normal;
+    margin-left: 2em;
+}
+section[class="guide-page-component"] > article :is(div[class="codes"]) > span[class="brace"] {
+    font-size: .9em;
+    color: hsl(253, 100%, 80%);
+}
+section[class="guide-page-component"] > article :is(div[class="codes"]) > span[class="code-line"] {
+    color: hsl(27, 68%, 58%);
+    margin-left: 4em;
+    font-size: .9em;
+}
+
