@@ -2,16 +2,19 @@ async function ServiceLogin(
   service?: string | unknown,
   password?: string | unknown
 ) {
-  const request = await fetch("http://localhost:3500/api/service/login", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      service: service,
-      service_password: password,
-    }),
-  });
+  const request = await fetch(
+    "https://web-authentication-services-restapi.onrender.com/api/service/login",
+    {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        service: service,
+        service_password: password,
+      }),
+    }
+  );
 
   const response = await request.json();
   console.log(response);

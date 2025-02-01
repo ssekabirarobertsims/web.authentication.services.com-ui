@@ -1,17 +1,17 @@
 section[class="create-service-page-component-wrapper"] {
-    min-height: 200vh;
-    width: min(100%, 100%);
+    height: 200vh;
+    width: 84.5em;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1em;
+    gap: 0em;
     background-color: transparent;
     /* border: 1px solid red; */
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] {
-    min-height: 200vh;
-    width: min(86%, 86%);
+    height: 190vh;
+    width: 80em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -33,7 +33,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
     max-width: 60em;
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form {
-    min-height: 100vh;
+    height: 200vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: flex-start;
@@ -44,7 +44,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
     /* border: 1px solid red; */
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
-    min-height: 10vh;
+    height: 15vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
    border-radius: .2em;
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form .agreement-wrapper {
-    min-height: 3em;
+    height: 3em;
     width: min(100%, 100%);
     /* border: 1px solid red; */
     display: flex;
@@ -107,7 +107,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
     gap: 1em;
  }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form .agreement-wrapper :is(input[type="checkbox"]) {
-    min-height: 1.2em;
+    height: 1.2em;
     width: 1.2em;
     border: 1px solid hsl(0, 0%, 70%);
     cursor: pointer;
@@ -176,8 +176,8 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
 
 /*  */
 section[class="log-into-service-page-component-wrapper"] {
-    min-height: 130vh;
-    width: min(100%, 100%);
+    height: 110vh;
+    width: 84.5em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -187,8 +187,8 @@ section[class="log-into-service-page-component-wrapper"] {
     /* border: 1px solid red; */
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] {
-    min-height: 110vh;
-    width: min(86%, 86%);
+    height: 100vh;
+    width: 80em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -214,7 +214,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
     color: var(--primary-color);
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form {
-    min-height: 40vh;
+    height: 70vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: flex-start;
@@ -225,7 +225,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
     /* border: 1px solid red; */
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
-    min-height: 10vh;
+    height: 15vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -314,20 +314,20 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
 }
 
 /*  */
-section[class="dashboard-page-component-wrapper"] {
-    min-height: 290vh;
-    width: min(100%, 100%);
+main[class="dashboard-page-component-wrapper"] {
+    height: 290vh;
+    width: 84.5em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 1em;
-    background-color: transparent;
     /* border: 1px solid red; */
+    background-color: transparent;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] {
-    min-height: 280vh;
-    width: min(86%, 86%);
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] {
+    height: 280vh;
+    width: 80em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -336,7 +336,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] {
     background-color: transparent;
     /* border: 1px solid red; */
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > a {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > a {
     text-decoration: none;
     color: var(--primary-color);
     display: flex;
@@ -344,22 +344,22 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > a
     align-items: center;
     gap: .2em;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > h1 {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > h1 {
     font-size: 1.7em;
     font-weight: normal;
     color: hsl(0, 0%, 20%);
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p {
     color: hsl(0, 0%, 20%);
     max-width: 60em;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p a {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > p a {
     text-decoration: none;
     color: var(--primary-color);
 }
-section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] {
-    min-height: 25vh;
-    width: min(100%, 100%);
+main[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] {
+    height: 25vh;
+    width: 80em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,10 +368,10 @@ section[class="dashboard-page-component-wrapper"] div[class="service-status-bars
     background-color: transparent;
     border-radius: .3em;
     background-color: hsl(120, 100%, 90%);
-    /* border: 1px solid hsl(0, 100%, 50%); */
+    border: 1px solid hsl(120, 100%, 40%);
 }
-section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div {
-    min-height: 22vh;
+main[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div {
+    height: 22vh;
     width: min(95%, 95%);
     display: flex;
     justify-content: center;
@@ -380,17 +380,17 @@ section[class="dashboard-page-component-wrapper"] div[class="service-status-bars
     gap: .7em;
     background-color: transparent;
 }
-section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(h1) {
+main[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(h1) {
     font-size: 1.3em;
     font-weight: normal;
     color: hsl(0, 0%, 20%);
 }
-section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(p) {
+main[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(p) {
     font-size: .9em;
     font-weight: normal;
     color: hsl(0, 0%, 20%);
 }
-section[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(button) {
+main[class="dashboard-page-component-wrapper"] div[class="service-status-bars-wrapper"] > div :is(button) {
     height: 3em;
     width: 8em;
     border: none;
@@ -398,9 +398,9 @@ section[class="dashboard-page-component-wrapper"] div[class="service-status-bars
     color: #fff;
     cursor: not-allowed;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] {
-    min-height: 130vh;
-    width: min(100%, 100%);
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] {
+    height: 130vh;
+    width: 80em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -408,10 +408,11 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     gap: 1em;
     background-color: transparent;
     border-radius: .3em;
+    /* border: 1px solid red; */
     border: 1px solid hsl(0, 0%, 80%);
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside {
-    min-height: 12vh;
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside {
+    height: 12vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -419,9 +420,10 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     flex-direction: column;
     gap: 1em;
     background-color: hsl(0, 0%, 96%);
+    border: none;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) {
-    min-height: 12vh;
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) {
+    height: 12vh;
     width: min(95%, 95%);
     display: flex;
     justify-content: center;
@@ -429,14 +431,14 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     flex-direction: column;
     gap: 1em;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) h1 {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] aside :where(div) h1 {
     font-size: 1.5em;
     font-weight: normal;
     color: hsl(0, 0%, 20%);
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul {
-    min-height: 30vh;
-    width: min(95%, 95%);
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul {
+    height: 110vh;
+    width: 77em;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -444,7 +446,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     gap: .4em;
     /* border: 1px solid red; */
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) {
     height: 12vh;
     width: min(100%, 100%);
     display: flex;
@@ -455,7 +457,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     gap: .0em;
     border-bottom: 1px solid hsl(0, 0%, 90%);
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) div {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) div {
     height: 12vh;
     width: min(100%, 33em);
     display: flex;
@@ -467,7 +469,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     overflow: hidden;
     flex-grow: 1;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button {
     height: 3em;
     width: 3em;
     border: none;
@@ -475,10 +477,10 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > d
     color: #101010;
     cursor: pointer;
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button:is(:hover, :focus) {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] > div[class="_dashboard-content"] ul :where(li) button:is(:hover, :focus) {
     background-color: hsl(0, 0%, 95%);
 }
-section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) {
+main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) {
     height: 6em;
     width: min(100%, 100%);
     outline-style: none;
@@ -487,8 +489,9 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
  }
- section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) div {
+ main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(aside) div {
     height: 5em;
     width: min(95%, 95%);
     outline-style: none;
@@ -498,7 +501,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
     align-items: center;
     color: #000;
  }
- section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
+ main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
    height: 20em;
    width: min(100%, 100%);
    display: flex;
@@ -510,9 +513,9 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
     /* background-color: hsl(0, 0%, 90%); */
     border-radius: .3em;
  }
- section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] {
+ main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] {
    height: 17em;
-   width: min(97%, 97%);
+   width: min(95%, 95%);
    display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -520,12 +523,12 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
     gap: .5em;
     /* border: 1px solid red; */
  }
- section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] > h1 {
+ main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] > h1 {
     font-size: 1.5em;
     font-weight: normal;
     color: hsl(0, 0%, 20%);
  }
- section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(button) {
+ main[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(button) {
     height: 3.3em;
     width: min(95%, 10em);
     outline-style: none;
@@ -538,8 +541,8 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
 
  /*  */
  section[class="offline-page-component"] {
-    min-height: 88vh;
-    width: min(100%, 100%);
+    height: 88vh;
+    width: 84.5em;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,14 +551,14 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
     gap: 1em;
  }
  section[class="offline-page-component"] img {
-    min-height: 20em;
+    height: 20em;
     width: min(100%, 20em);
  }
 
  /*  */
 section[class="guide-page-component"] {
-    min-height: 290vh;
-    width: min(100%, 100%);
+    height: 290vh;
+    width: 84.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -563,8 +566,8 @@ section[class="guide-page-component"] {
     gap: 1em;
 }
 section[class="guide-page-component"] > article {
-    min-height: 280vh;
-    width: min(90%, 90%);
+    height: 280vh;
+    width: 80em;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -592,7 +595,7 @@ section[class="guide-page-component"] > article :is(p) {
 }
 section[class="guide-page-component"] > article :is(div[class="codes"]) {
     height: 12em;
-    width: min(100%, 40em);
+    width: 40em;
     border: 1px solid hsl(0, 0%, 80%);
     display: flex;
     align-items: flex-start;

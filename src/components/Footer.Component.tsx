@@ -52,6 +52,12 @@ const FooterComponent: React.FC = () => {
             >
               <li>Sponsors</li>
             </Link>
+            <a
+              href="https://web-authentication-services-restapi.onrender.com/"
+              target="_blank"
+            >
+              Api
+            </a>
           </ul>
         </aside>
         <aside>

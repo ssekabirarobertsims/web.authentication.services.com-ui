@@ -31,7 +31,7 @@ const DashboardPage: React.FC = () => {
   return (
     <>
       <NavigationBarComponent />
-      <section className="dashboard-page-component-wrapper">
+      <main className="dashboard-page-component-wrapper">
         <article className="__wrapper">
           <Link
             to={{
@@ -245,14 +245,16 @@ const DashboardPage: React.FC = () => {
                   <span>Service Api Link</span>
                 </div>
                 <div>
-                  <span>https://keep-memories-rest-api.onrender.com</span>
+                  <span>
+                    https://web-authentication-services-restapi.onrender.com
+                  </span>
                 </div>
                 <button
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation();
                     window.navigator.clipboard.writeText(
-                      "https://keep-memories-rest-api.onrender.com" as string
+                      "https://web-authentication-services-restapi.onrender.com" as string
                     );
                   }}
                 >
@@ -318,7 +320,7 @@ const DashboardPage: React.FC = () => {
                   ).style.display = "flex";
 
                   const request = await axios.delete(
-                    `http://localhost:3500/api/registered/services/${service?.data?.service_id}`,
+                    `https://web-authentication-services-restapi.onrender.com/api/registered/services/${service?.data?.service_id}`,
                     {
                       headers: {
                         Authorization: `Bearer ${
@@ -367,7 +369,7 @@ const DashboardPage: React.FC = () => {
             </div>
           </div>
         </article>
-      </section>
+      </main>
       <Loader />
       <FooterComponent />
     </>

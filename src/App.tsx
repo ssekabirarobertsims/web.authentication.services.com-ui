@@ -34,3 +34,7 @@ function App() {
 }
 
 export default App;
+
+// ****** todos ****
+// add responsive
+//

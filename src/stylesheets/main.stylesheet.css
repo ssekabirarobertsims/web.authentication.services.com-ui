@@ -14,7 +14,7 @@
 
 body {
   min-height: 100vh;
-  width: min(100%, 100%);
+  width: 84.4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,12 +30,13 @@ body {
 }
 
 main {
-  min-height: 100vh;
-  width: min(100%, 100%);
+  height: 400vh;
+  width: 84.4em;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -49,7 +50,7 @@ main {
 
 #root {
   min-height: 100vh;
-  width: min(100%, 100%);
+  width: 84.4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,8 +78,8 @@ input {
 
 /*  */
 nav {
-    min-height: 13vh;
-    width: min(100%, 100%);
+    height: 13vh;
+    width: 84.4em;
     display: flex;
     place-content: center;
     place-items: center;
@@ -88,10 +89,11 @@ nav {
     border: 1px solid rgba(255,255,255,0.25);
     border-bottom: 1px solid hsl(0, 0%, 80%);
     /* box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .2); */
+    flex-flow: row nowrap;
 }
 nav article {
-    min-height: 10vh;
-    width: min(90%, 40em);
+    height: 10vh;
+    width: min(90%, 38em);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -102,7 +104,7 @@ nav article {
     color: hsl(0, 0%, 20%);
 }
 nav article[class="_nav-bar-content"] {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 nav article[class="_nav-bar-content"] ul {
   display: flex;
@@ -132,28 +134,29 @@ nav article[class="_nav-bar-content"] ul a li :is(button) {
 
 /*  */
 header {
-    min-height: 100vh;
-    width: min(100%, 100%);
+    height: 100vh;
+    width: 84.4em;
     display: flex;
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
-    overflow: hidden;
+    /* overflow: hidden; */
     flex-flow: row nowrap;
 }
 header article[class="animation-wrapper"] {
-    height: 80vh;
-    width: 40em;
+    height: 100vh;
+    width: min(90%, 35em);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     /* border: 1px solid red; */
     flex-direction: column;
+    overflow: hidden;
     gap: 1em;
 }
 header article[class="header-content-wrapper"] {
-    min-height: 80vh;
-    width: 40em;
+    height: 80vh;
+    width: min(90%, 40em);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -238,8 +241,8 @@ aside[class="header-alert-msg"] :is(div) p {
 
 /*  */
 .loader-wrapper {
-  min-height: 100vh;
-  width: min(100%, 100%);
+  height: 100vh;
+  width: 84.4em;
   background: rgba(255,255,255,0.5);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
@@ -273,8 +276,8 @@ aside[class="header-alert-msg"] :is(div) p {
 
 /*  */
 .blank-redirect-page {
-  min-height: 100vh;
-  width: min(100%, 100%);
+  height: 100vh;
+  width: 84.4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,29 +299,30 @@ aside[class="header-alert-msg"] :is(div) p {
 
 /*  */
 footer {
-    min-height: 55vh;
-    width: min(100%, 100%);
+    height: 55vh;
+    width: 84.4em;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border-top: 1px solid hsl(0, 0%, 80%);
     background-color: hsl(0, 0%, 100%);
     flex-direction: column;
+    /* border: 1px solid red; */
 }
 footer article {
-    min-height: 38vh;
+    height: 38vh;
     width: min(90%, 90%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     /* border: 1px solid red; */
     gap: .0em;
 }
 footer article > aside {
-    min-height: 38vh;
-    width: min(100%, 25em);
+    height: 38vh;
+    width: min(100%, 23em);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -347,13 +351,13 @@ footer article > aside :is(ul) a > li {
   list-style: none;
 }
 footer div {
-  min-height: 8vh;
-  width: min(100%, 100%);
+  height: 8vh;
+  width: 84.4em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   /* border: 1px solid red; */
   gap: .0em;
   background-color: hsl(0, 0%, 95%);

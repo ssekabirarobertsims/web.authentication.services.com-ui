@@ -134,13 +134,14 @@ const ApiGuidePage: React.FC = () => {
           </p>
           <p>
             For further details, refer to the API’s developer{" "}
-            <a href="" target="_blankhttps://robertsims.netlify.app/">
+            <a href="https://robertsims.netlify.app/" target="_blank">
               robert sims
             </a>
             .
           </p>
         </article>
       </section>
+      <br />
       <FooterComponent />
     </>
   );

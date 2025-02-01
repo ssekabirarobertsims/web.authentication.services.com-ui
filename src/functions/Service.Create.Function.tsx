@@ -7,7 +7,7 @@ async function ServiceCreation(
   description?: string | unknown
 ) {
   const request = await fetch(
-    "http://localhost:3500/api/service/registration",
+    "https://web-authentication-services-restapi.onrender.com/api/service/registration",
     {
       method: "POST",
       headers: {
