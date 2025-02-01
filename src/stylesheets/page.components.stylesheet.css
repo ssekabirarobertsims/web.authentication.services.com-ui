@@ -1,8 +1,9 @@
 section[class="create-service-page-component-wrapper"] {
-    height: 200vh;
+    min-height: 210vh;
     width: 84.5em;
     display: flex;
     justify-content: center;
+    /* border: 1px solid red; */
     align-items: center;
     flex-direction: column;
     gap: 0em;
@@ -10,15 +11,15 @@ section[class="create-service-page-component-wrapper"] {
     /* border: 1px solid red; */
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] {
-    height: 190vh;
+    min-height: 200vh;
     width: 80em;
     display: flex;
     justify-content: center;
+    /* border: 1px solid red; */
     align-items: flex-start;
     flex-direction: column;
     gap: 1em;
     background-color: transparent;
-    /* border: 1px solid red; */
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > a {
     text-decoration: none;
@@ -33,10 +34,11 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
     max-width: 60em;
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form {
-    height: 200vh;
+    min-height: 200vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: flex-start;
+    /* border: 1px solid red; */
     align-items: flex-start;
     flex-direction: column;
     gap: 1em;
@@ -44,7 +46,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
     /* border: 1px solid red; */
 }
 section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
-    height: 15vh;
+    min-height: 15vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -126,8 +128,10 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
    display: flex;
    justify-content: center;
    align-items: center;
+   border: 1px solid hsl(216, 100%, 50%);
+   overflow: hidden;
 }
-section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) div {
+section[class="create-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) > div {
    height: 5em;
    width: min(95%, 95%);
    outline-style: none;
@@ -176,7 +180,7 @@ section[class="create-service-page-component-wrapper"] article[class="__wrapper"
 
 /*  */
 section[class="log-into-service-page-component-wrapper"] {
-    height: 110vh;
+    min-height: 130vh;
     width: 84.5em;
     display: flex;
     justify-content: flex-start;
@@ -187,7 +191,7 @@ section[class="log-into-service-page-component-wrapper"] {
     /* border: 1px solid red; */
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] {
-    height: 100vh;
+    min-height: 100vh;
     width: 80em;
     display: flex;
     justify-content: center;
@@ -214,7 +218,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
     color: var(--primary-color);
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form {
-    height: 70vh;
+    min-height: 70vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: flex-start;
@@ -225,7 +229,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
     /* border: 1px solid red; */
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(div) {
-    height: 15vh;
+    min-height: 15vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -261,10 +265,12 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
    width: min(90%, 47em);
    outline-style: none;
    background-color: hsl(216, 100%, 95%);
+   border: 1px solid hsl(216, 100%, 50%);
    border-radius: .2em;
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: hidden;
 }
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"] > form :is(aside) div {
    height: 5em;

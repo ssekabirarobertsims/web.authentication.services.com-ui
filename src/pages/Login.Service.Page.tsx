@@ -18,6 +18,7 @@ const LoginServicePage: React.FC = () => {
       <Loader />
       <section className="log-into-service-page-component-wrapper">
         <article className="__wrapper">
+          <br />
           <Link
             to={{
               pathname: "/",
