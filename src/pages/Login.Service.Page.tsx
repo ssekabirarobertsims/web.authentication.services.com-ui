@@ -1,9 +1,6 @@
 import React from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
-import { Link } from "react-router-dom";
-import { IoMdArrowBack } from "react-icons/io";
-import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import ServiceLogin from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
@@ -19,27 +16,7 @@ const LoginServicePage: React.FC = () => {
       <section className="log-into-service-page-component-wrapper">
         <article className="__wrapper">
           <br />
-          <Link
-            to={{
-              pathname: "/",
-            }}
-          >
-            <IoMdArrowBack /> Back
-          </Link>
-          <p>
-            Do not have a service yet{" "}
-            <Link
-              to={{
-                pathname: "/service/registration",
-              }}
-            >
-              create and register
-            </Link>{" "}
-            for a new service here to host your own web authentication service
-            on our platform to help handle your ui design authentication needs
-            and system.
-          </p>
-          <br />
+          <h1>Log Into Service</h1>
           <form action="" method="post">
             <div>
               <span className="warning-flag-wrapper">
@@ -78,15 +55,6 @@ const LoginServicePage: React.FC = () => {
                 value={password}
               />
             </div>
-            <br />
-            <aside>
-              <div>
-                <p>
-                  <RiErrorWarningLine /> Once the service is created, it cant be
-                  edited!
-                </p>
-              </div>
-            </aside>
             <br />
             <button
               type="button"

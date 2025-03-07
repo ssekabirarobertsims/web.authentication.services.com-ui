@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
-import { Link } from "react-router-dom";
 import { RiErrorWarningLine } from "react-icons/ri";
-import { IoMdArrowBack } from "react-icons/io";
 import { IoCopyOutline } from "react-icons/io5";
 import { _serviceContext } from "../App";
 import Loader from "../components/Loader.Component";
 import axios from "axios";
+import LogoutFormComponent from "../components/Logout.Form.Component";
 
 interface Service {
   data: {
@@ -24,36 +23,16 @@ interface Service {
   message: string;
 }
 
+import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
+
 const DashboardPage: React.FC = () => {
   const service: Service = useContext(_serviceContext) as unknown as Service;
-  console.log(service ? service : "no");
 
   return (
     <>
       <NavigationBarComponent />
-      <main className="dashboard-page-component-wrapper">
+      <section className="dashboard-page-component-wrapper">
         <article className="__wrapper">
-          <Link
-            to={{
-              pathname: "/",
-            }}
-          >
-            <IoMdArrowBack /> Back
-          </Link>
-          <p>
-            Do not have a service secrete key yet or lost it{" "}
-            <Link
-              to={{
-                pathname: "/service/registration",
-              }}
-            >
-              get new secrete key
-            </Link>{" "}
-            for your web ui authentication system services right now to continue
-            using the platform to test out and handle all your ui authentication
-            needs and services.
-          </p>
-          <br />
           <div className="service-status-bars-wrapper">
             <div className="service-status-bar">
               <h1>Service Status</h1>
@@ -245,16 +224,14 @@ const DashboardPage: React.FC = () => {
                   <span>Service Api Link</span>
                 </div>
                 <div>
-                  <span>
-                    https://web-authentication-services-restapi.onrender.com
-                  </span>
+                  <span>https://keep-memories-rest-api.onrender.com</span>
                 </div>
                 <button
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation();
                     window.navigator.clipboard.writeText(
-                      "https://web-authentication-services-restapi.onrender.com" as string
+                      "https://keep-memories-rest-api.onrender.com" as string
                     );
                   }}
                 >
@@ -284,21 +261,12 @@ const DashboardPage: React.FC = () => {
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation();
+
                   (
                     window.document.querySelector(
-                      ".loader-wrapper"
-                    ) as HTMLSpanElement
+                      ".logout-form-component"
+                    ) as HTMLElement
                   ).style.display = "flex";
-
-                  window.setTimeout(() => {
-                    (
-                      window.document.querySelector(
-                        ".loader-wrapper"
-                      ) as HTMLSpanElement
-                    ).style.display = "none";
-                    window.localStorage.removeItem("service_login_info");
-                    window.location.href = "/service/login";
-                  }, 2500 as number);
                 }}
               >
                 Log out
@@ -369,8 +337,10 @@ const DashboardPage: React.FC = () => {
             </div>
           </div>
         </article>
-      </main>
+      </section>
       <Loader />
+      <SiteDeveloperNavigationComponent />
+      <LogoutFormComponent />
       <FooterComponent />
     </>
   );

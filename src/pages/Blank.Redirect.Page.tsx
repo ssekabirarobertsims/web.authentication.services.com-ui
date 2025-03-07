@@ -4,7 +4,7 @@ const BlankRedirectPage: React.FC = () => {
   React.useEffect(() => {
     window.setTimeout(() => {
       window.location.href = "/service/login";
-    }, 3000 as number);
+    }, 4000 as number);
   });
 
   return (

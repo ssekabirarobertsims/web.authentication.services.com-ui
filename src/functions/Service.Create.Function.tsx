@@ -25,7 +25,6 @@ async function ServiceCreation(
   );
 
   const response = await request.json();
-  console.log(response);
 
   (
     window.document.querySelector(".loader-wrapper") as HTMLSpanElement

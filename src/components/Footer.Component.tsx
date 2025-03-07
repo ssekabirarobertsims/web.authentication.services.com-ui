@@ -52,11 +52,8 @@ const FooterComponent: React.FC = () => {
             >
               <li>Sponsors</li>
             </Link>
-            <a
-              href="https://web-authentication-services-restapi.onrender.com/"
-              target="_blank"
-            >
-              Api
+            <a href="https://jsonresources-api.netlify.app/" target="_blank">
+              <li>json resources api</li>
             </a>
           </ul>
         </aside>
@@ -69,8 +66,11 @@ const FooterComponent: React.FC = () => {
             <a href="http://robertsims.netlify.app" target="_blank">
               <li>Database Engineer</li>
             </a>
-            <a href="http://robertsims.netlify.app" target="_blank">
-              <li>Design Engineer</li>
+            <a href="https://web-authentication-services-restapi.onrender.com/" target="_blank">
+              <li>API</li>
+            </a>
+            <a href="http://stack-technologies.netlify.app" target="_blank">
+              <li>Organization</li>
             </a>
           </ul>
         </aside>
@@ -81,7 +81,7 @@ const FooterComponent: React.FC = () => {
               to={{
                 pathname: "",
               }}
-            >
+            > 
               <li>Terms</li>
             </Link>
             <Link

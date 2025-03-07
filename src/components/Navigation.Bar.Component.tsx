@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { _serviceContext } from "../App";
 import { GiAstronautHelmet } from "react-icons/gi";
 
 const NavigationBarComponent: React.FC = () => {
-  const service = React.useContext(_serviceContext);
+  const buttonRef = useRef(null);
 
   return (
     <nav>
+      <aside className="navigation-bar-content-wrapper">
       <article>
         <span>
           <span className="logo">
@@ -20,36 +21,42 @@ const NavigationBarComponent: React.FC = () => {
         <ul>
           <Link
             to={{
-              pathname: service ? "/dashboard" : "/service/login",
+              pathname: "/",
+            }}
+          >
+            <li>Home</li>
+          </Link>
+          <Link
+            to={{
+              pathname: "/dashboard",
             }}
           >
             <li>Dashboard</li>
           </Link>
           <Link
             to={{
-              pathname: service ? "/api/system/guide" : "/service/login",
+              pathname: "/api/system/guide",
             }}
           >
             <li>Guide</li>
           </Link>
           <Link
             to={{
-              pathname: service ? "/dashboard" : "/service/login",
+              pathname: "/dashboard",
             }}
           >
             <li>Login</li>
           </Link>
+        </ul>
+      </article>
           <Link
             to={{
               pathname: "/service/registration",
             }}
           >
-            <li>
-              <button type="button">Sign Up</button>
-            </li>
+              <button type="button" ref={buttonRef}>Sign Up</button>
           </Link>
-        </ul>
-      </article>
+      </aside>
     </nav>
   );
 };

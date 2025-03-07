@@ -1,8 +1,7 @@
 import React from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
-import { Link } from "react-router-dom";
-import { IoMdArrowBack } from "react-icons/io";
+import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
 
 const ApiGuidePage: React.FC = () => {
   return (
@@ -10,27 +9,6 @@ const ApiGuidePage: React.FC = () => {
       <NavigationBarComponent />
       <section className="guide-page-component">
         <article>
-          <Link
-            to={{
-              pathname: "/",
-            }}
-          >
-            <IoMdArrowBack /> Back
-          </Link>
-          <p>
-            Do not have a service secrete key yet or lost it{" "}
-            <Link
-              to={{
-                pathname: "/service/registration",
-              }}
-            >
-              get new secrete key
-            </Link>{" "}
-            for your web ui authentication system services right now to continue
-            using the platform to test out and handle all your ui authentication
-            needs and services.
-          </p>
-          <br />
           <h1>Full Guide For Api</h1>
           <strong>How to Use an API for Authentication Services</strong>
           <p>
@@ -56,21 +34,10 @@ const ApiGuidePage: React.FC = () => {
           <p>
             To allow users to create accounts, send a POST request to the API’s
             registration endpoint. Example: POST /api/user/account/signup
-            Content-Type: application/json
+            Content-Type: application/json and make sure to include
+            YOUR_ACCESS_SECRETE_KEY in the authorization headers for each
+            request sent to the server.
           </p>
-          <div className="codes">
-            <span className="brace"> {"{"}</span>
-            <span className="code-line"> {`"username": "john doe",`}</span>
-            <span className="code-line">
-              {" "}
-              {`"email": "johndoe@example.com",`}
-            </span>
-            <span className="code-line">
-              {" "}
-              {`"password": "securepassword123"`}
-            </span>
-            <span className="brace"> {"}"}</span>
-          </div>
           <p>
             The API responds with a success message or an error if validation
             fails.
@@ -78,16 +45,14 @@ const ApiGuidePage: React.FC = () => {
           <br />
           <strong>3. User Login</strong>
           <p>
-            Users log in by providing their credentials. Send a POST request to
-            the login endpoint:
+            Users log in by providing their credentials that include the email
+            and password. Send a POST request to the login endpoint and make
+            sure to include YOUR_ACCESS_SECRETE_KEY in the authorization headers
+            for each request sent to the server:
           </p>
-          POST /api/login Content-Type: application/json
-          <div className="codes">
-            <span className="brace">{"{"}</span>
-            <span className="code-line">{`"email": "johndoe@example.com",`}</span>
-            <span className="code-line">{`"password": "securepassword123"`}</span>
-            <span className="brace">{"}"}</span>
-          </div>
+          <p className="endpoint">
+            POST /api/user/login Content-Type: application/json
+          </p>
           <p>
             Upon success, the API returns an authentication information for a
             single user.
@@ -99,8 +64,11 @@ const ApiGuidePage: React.FC = () => {
             access protected resources. This is typically done via an
             Authorization header:
           </p>
-          POST /api/user/account/signup Authorization: Bearer
-          YOUR_ACCESS_SECRETE_KEY
+          <p className="endpoint">
+            {" "}
+            POST /api/user/account/signup Authorization: Bearer
+            YOUR_ACCESS_SECRETE_KEY
+          </p>
           <p>
             If the secrete token or key is invalid or expired, the API responds
             with an authentication error, prompting the user to log in again.
@@ -111,7 +79,7 @@ const ApiGuidePage: React.FC = () => {
             Some APIs provide a token refresh mechanism to extend user sessions
             without requiring re-login:
           </p>
-          <p>
+          <p className="endpoint">
             POST /api/token/refresh Authorization: Bearer YOUR_REFRESH_TOKEN
           </p>
           <p>For logout, invalidate the token:</p>
@@ -122,6 +90,10 @@ const ApiGuidePage: React.FC = () => {
           <p>
             Store tokens securely (e.g., HTTP-only cookies, secure local
             storage).
+          </p>
+          <p>
+            Make secure requests to the api including YOUR_ACCESS_SECRETE_KEY in
+            the authorization headers for each request sent to the server.
           </p>
           <p>Implement rate limiting to prevent brute-force attacks.</p>
           <p>Use multi-factor authentication (MFA) for added security.</p>
@@ -134,14 +106,14 @@ const ApiGuidePage: React.FC = () => {
           </p>
           <p>
             For further details, refer to the API’s developer{" "}
-            <a href="https://robertsims.netlify.app/" target="_blank">
+            <a href="" target="_blankhttps://robertsims.netlify.app/">
               robert sims
             </a>
             .
           </p>
         </article>
       </section>
-      <br />
+      <SiteDeveloperNavigationComponent />
       <FooterComponent />
     </>
   );

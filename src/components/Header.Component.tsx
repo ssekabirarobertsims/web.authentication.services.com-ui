@@ -1,20 +1,18 @@
-import React from "react";
-import Lottie from "lottie-react";
-import animation from "../assets/Animation - 1738226479418.json";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { RiErrorWarningLine } from "react-icons/ri";
 
 const HeaderComponent: React.FC = () => {
-  const content = React.useRef("direct api for web authentication services");
+  const content = React.useRef(
+    "The ultimate starter web authentication api free services for your project."
+  );
+  const buttonRef = useRef(null);
+  const photoRef = useRef(null);
 
   return (
     <>
       <header>
-        <article className="animation-wrapper">
-          <Lottie animationData={animation} />
-        </article>
         <article className="header-content-wrapper">
-          <h1>{content.current.toLocaleUpperCase()}</h1>
+          <span>{content.current.toLocaleUpperCase()}</span>
           <p>
             Handle and make safe and secure authentications for users for your
             ui sites design without handling any backend codes with just one
@@ -25,21 +23,15 @@ const HeaderComponent: React.FC = () => {
               pathname: "/service/registration",
             }}
           >
-            <button type="button">Create Service</button>
+            <button type="button" ref={buttonRef}>
+              Get Started Free
+            </button>
           </Link>
         </article>
+        <article className="animation-wrapper">
+          <img src="/banner_hu_bd8330c75c01695c.webp" alt="" ref={photoRef} />
+        </article>
       </header>
-      <br />
-      <aside className="header-alert-msg">
-        <div>
-          <p>
-            <RiErrorWarningLine /> This site is managed and developed for only
-            software development purposes and help frontend and web developers
-            carry out authentication for ui designs with no backend services
-            only.
-          </p>
-        </div>
-      </aside>
       <br />
       <br />
     </>
