@@ -224,14 +224,14 @@ const DashboardPage: React.FC = () => {
                   <span>Service Api Link</span>
                 </div>
                 <div>
-                  <span>https://keep-memories-rest-api.onrender.com</span>
+                  <span>https://web-authentication-services-restapi.onrender.com/</span>
                 </div>
                 <button
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation();
                     window.navigator.clipboard.writeText(
-                      "https://keep-memories-rest-api.onrender.com" as string
+                      "https://web-authentication-services-restapi.onrender.com/" as string
                     );
                   }}
                 >
@@ -264,9 +264,18 @@ const DashboardPage: React.FC = () => {
 
                   (
                     window.document.querySelector(
-                      ".logout-form-component"
+                      ".loader-wrapper"
                     ) as HTMLElement
                   ).style.display = "flex";
+
+                  window.setTimeout(() => {
+                    (
+                      window.document.querySelector(".loader-wrapper") as HTMLSpanElement
+                    ).style.display = "none";
+              
+                   window.localStorage.removeItem("service_login_info");
+                   window.location.href = "/service/login";
+                  }, 5000 as unknown as number);
                 }}
               >
                 Log out

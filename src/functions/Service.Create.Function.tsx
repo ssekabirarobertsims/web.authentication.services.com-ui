@@ -44,7 +44,6 @@ async function ServiceCreation(
       ).style.display = "none";
     }, 2500 as number);
   } else {
-    window.localStorage.setItem("service_login_info", JSON.stringify(response));
     (
       window.document.querySelector(".warning-flag-wrapper") as HTMLSpanElement
     ).style.display = "none";
@@ -54,7 +53,7 @@ async function ServiceCreation(
         window.document.querySelector(".loader-wrapper") as HTMLSpanElement
       ).style.display = "none";
 
-      window.location.href = "/authentication/redirect/blank/page" as string;
+      window.location.href = "/authentication/redirect/blank/authorization/page-1" as string;
     }, 2500 as number);
   }
 }

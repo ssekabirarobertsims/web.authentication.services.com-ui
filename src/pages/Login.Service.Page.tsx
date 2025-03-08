@@ -55,6 +55,10 @@ const LoginServicePage: React.FC = () => {
                 value={password}
               />
             </div>
+            <p>
+              New to web authentication services?{" "}
+              <a href="/service/registration">Register a new service</a>
+            </p>
             <br />
             <button
               type="button"

@@ -208,13 +208,13 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>p {
-    color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
     max-width: 60em;
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>p a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: hsl(0, 0%, 80%);
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form {
@@ -228,6 +228,16 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
     background-color: transparent;
     text-align: center;
     /* border: 1px solid red; */
+}
+
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form>p {
+    color: hsl(0, 0%, 90%);
+    max-width: 60em;
+}
+
+section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form>p a {
+    text-decoration: none;
+    color: hsl(0, 0%, 60%);
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form :is(div) {

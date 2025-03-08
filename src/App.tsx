@@ -35,7 +35,7 @@ function App() {
           element={service ? <DashboardPage /> : <LoginServicePage />}
         ></Route>
         <Route
-          path="/authentication/redirect/blank/page"
+          path="/authentication/redirect/blank/authorization/page-1"
           element={service ? <DashboardPage /> : <BlankRedirectPage />}
         ></Route>
       </Routes>
