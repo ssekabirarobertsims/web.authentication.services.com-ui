@@ -1,4 +1,4 @@
-async function ServiceLogin(
+async function ServiceLoginFunction(
   service?: string | unknown,
   password?: string | unknown
 ) {
@@ -18,10 +18,6 @@ async function ServiceLogin(
 
   const response = await request.json();
 
-  (
-    window.document.querySelector(".loader-wrapper") as HTMLSpanElement
-  ).style.display = "flex";
-
   if (!request.ok) {
     (
       window.document.querySelector(".warning-flag-wrapper") as HTMLSpanElement
@@ -30,26 +26,20 @@ async function ServiceLogin(
       window.document.querySelector(".warning-flag") as HTMLSpanElement
     ).textContent = response?.message;
 
-    window.setTimeout(() => {
-      (
-        window.document.querySelector(".loader-wrapper") as HTMLSpanElement
-      ).style.display = "none";
-    }, 2500 as number);
   } else {
-    window.localStorage.setItem("service_login_info", JSON.stringify(response));
+    window.localStorage.setItem(
+      "service_login_info",
+      window.encodeURIComponent(JSON.stringify(response))
+    );
 
     (
       window.document.querySelector(".warning-flag-wrapper") as HTMLSpanElement
     ).style.display = "none";
 
     window.setTimeout(() => {
-      (
-        window.document.querySelector(".loader-wrapper") as HTMLSpanElement
-      ).style.display = "none";
-
       window.location.href = "/dashboard" as string;
     }, 2500 as number);
   }
 }
 
-export default ServiceLogin;
+export default ServiceLoginFunction;
