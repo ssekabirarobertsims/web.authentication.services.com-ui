@@ -14,6 +14,7 @@ interface Service {
   project: string;
 }
 
-const service: Service = JSON.parse(information) as Service;
+const DecodedServiceLoginInformation: string = window.decodeURIComponent(information) as string;
+const service: Service = JSON.parse(DecodedServiceLoginInformation) as Service;
 
 export default service;
