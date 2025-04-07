@@ -80,7 +80,7 @@ main {
 }
 
 button:active {
-  scale: 0.8;
+  scale: 0.9;
 }
 
 input {
@@ -268,8 +268,8 @@ aside[class="header-alert-msg"] :is(div) p {
 /*  */
 .service-warning-flag-wrapper-xyz {
   height: 4em;
-  width: min(61.5%, 61.5%);
   /* border: 1px solid red; */
+  width: min(90%, 47em);
   background-color: hsl(0, 100%, 95%);
   display: none;
   justify-content: flex-start;

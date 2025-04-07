@@ -25,7 +25,7 @@ const CreateServicePage: React.FC = () => {
             <article className="form-inputs-wrapper">
               <div>
                 <span className="service-warning-flag-wrapper-abc">
-                  <span className="warning-flag"></span>
+                  <span className="warning-flag-abc"></span>
                 </span>
                 <label htmlFor="service">1. Fill in the service name: </label>
                 <input
@@ -130,6 +130,9 @@ const CreateServicePage: React.FC = () => {
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation();
+                  const Loader: HTMLElement = window.document.querySelector(".loader-wrapper") as HTMLElement;
+                  Loader.style.display = "flex";
+
                   ServiceCreation(
                     serviceName as string,
                     ownerUsername as string,
@@ -138,6 +141,8 @@ const CreateServicePage: React.FC = () => {
                     projectName as string,
                     description as string
                   );
+
+                  window.setTimeout(() => Loader.style.display = "none", 4000 as number);
                 }}
               >
                 Create Service

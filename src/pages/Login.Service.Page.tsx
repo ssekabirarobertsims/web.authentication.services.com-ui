@@ -18,10 +18,10 @@ const LoginServicePage: React.FunctionComponent = () => {
           <br />
           <h1>Log Into Service</h1>
           <form action="" method="post">
-            <div>
               <span className="service-warning-flag-wrapper-xyz">
-                <span className="warning-flag">hhhh</span>
+                <span className="warning-flag-xyz">hhhh</span>
               </span>
+            <div>
               <label htmlFor="service">1. Fill in the service name: </label>
               <input
                 type="text"
