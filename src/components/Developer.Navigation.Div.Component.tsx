@@ -5,7 +5,7 @@ const SiteDeveloperNavigationComponent: React.FC = () => {
     <>
         <div className="site-developer-navigation-component">
             <p>Need help from me?</p>
-            <a href="http://robertsims.netlify.app" target="_blank">
+            <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
               <img src="/robertsims.jpg" alt="" />
             </a>    
         </div>

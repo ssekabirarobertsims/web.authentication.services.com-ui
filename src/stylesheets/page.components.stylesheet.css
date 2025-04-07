@@ -178,7 +178,7 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form :
 
 /*  */
 section[class="log-into-service-page-component-wrapper"] {
-    min-height: 80vh;
+    min-height: 60vh;
     width: min(100%, 100%);
     display: flex;
     justify-content: flex-start;

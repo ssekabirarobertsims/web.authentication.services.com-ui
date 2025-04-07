@@ -2,14 +2,14 @@ import React from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
 import { useState } from "react";
-import ServiceLogin from "../functions/Service.Login.Function";
+import ServiceLoginFunction from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
 
-const LoginServicePage: React.FC = () => {
+const LoginServicePage: React.FunctionComponent = () => {
   const [service, setService] = useState("" as string);
   const [password, setPassword] = useState("" as string | number);
 
-  return (
+  return ( 
     <>
       <NavigationBarComponent />
       <Loader />
@@ -19,8 +19,8 @@ const LoginServicePage: React.FC = () => {
           <h1>Log Into Service</h1>
           <form action="" method="post">
             <div>
-              <span className="warning-flag-wrapper">
-                <span className="warning-flag"></span>
+              <span className="service-warning-flag-wrapper-xyz">
+                <span className="warning-flag">hhhh</span>
               </span>
               <label htmlFor="service">1. Fill in the service name: </label>
               <input
@@ -64,7 +64,11 @@ const LoginServicePage: React.FC = () => {
               type="button"
               onClick={(event) => {
                 event.stopPropagation();
-                ServiceLogin(service, password);
+                const Loader: HTMLElement = window.document.querySelector(".loader-wrapper") as HTMLElement;
+                Loader.style.display = "flex";
+                ServiceLoginFunction(service, password);
+
+                window.setTimeout(() => Loader.style.display = "none", 4000 as number);
               }}
             >
               Log Into Service
@@ -72,6 +76,10 @@ const LoginServicePage: React.FC = () => {
           </form>
         </article>
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
       <FooterComponent />
     </>
   );

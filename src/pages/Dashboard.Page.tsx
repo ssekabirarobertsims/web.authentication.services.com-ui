@@ -3,7 +3,7 @@ import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoCopyOutline } from "react-icons/io5";
-import { _serviceContext } from "../App";
+import serviceContext from "../context/Service.Login.Information.Context";
 import Loader from "../components/Loader.Component";
 import axios from "axios";
 import LogoutFormComponent from "../components/Logout.Form.Component";
@@ -26,7 +26,7 @@ interface Service {
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
 
 const DashboardPage: React.FC = () => {
-  const service: Service = useContext(_serviceContext) as unknown as Service;
+  const service: Service = useContext(serviceContext) as unknown as Service;
 
   return (
     <>

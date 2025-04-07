@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+// import Loader from "./Loader.Component";
+import CookiesWarningComponent from "./Cookies.Warning.Component";
 
 const HeaderComponent: React.FC = () => {
   const content = React.useRef(
@@ -34,6 +36,7 @@ const HeaderComponent: React.FC = () => {
       </header>
       <br />
       <br />
+      <CookiesWarningComponent />
     </>
   );
 };

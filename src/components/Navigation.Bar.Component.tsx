@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { _serviceContext } from "../App";
 import { GiAstronautHelmet } from "react-icons/gi";
 
 const NavigationBarComponent: React.FC = () => {
@@ -35,7 +34,7 @@ const NavigationBarComponent: React.FC = () => {
           </Link>
           <Link
             to={{
-              pathname: "/api/system/guide",
+              pathname: "/guide",
             }}
           >
             <li>Guide</li>

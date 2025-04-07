@@ -24,7 +24,7 @@ const CreateServicePage: React.FC = () => {
           <form action="" method="post">
             <article className="form-inputs-wrapper">
               <div>
-                <span className="warning-flag-wrapper">
+                <span className="service-warning-flag-wrapper-abc">
                   <span className="warning-flag"></span>
                 </span>
                 <label htmlFor="service">1. Fill in the service name: </label>

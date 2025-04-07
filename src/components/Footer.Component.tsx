@@ -33,14 +33,14 @@ const FooterComponent: React.FC = () => {
           <ul>
             <Link
               to={{
-                pathname: "/api/system/guide",
+                pathname: "/guide",
               }}
             >
               <li>Guide</li>
             </Link>
             <Link
               to={{
-                pathname: "/api/system/guide",
+                pathname: "/guide",
               }}
             >
               <li>Help</li>
@@ -60,16 +60,16 @@ const FooterComponent: React.FC = () => {
         <aside>
           <h1>Developers & Engineers</h1>
           <ul>
-            <a href="http://robertsims.netlify.app" target="_blank">
+            <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
               <li>Developer</li>
             </a>
-            <a href="http://robertsims.netlify.app" target="_blank">
+            <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
               <li>Database Engineer</li>
             </a>
             <a href="https://web-authentication-services-restapi.onrender.com/" target="_blank">
               <li>API</li>
             </a>
-            <a href="http://stack-technologies.netlify.app" target="_blank">
+            <a href="http://stacktechnologies.netlify.app" target="_blank">
               <li>Organization</li>
             </a>
           </ul>

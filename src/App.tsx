@@ -4,25 +4,17 @@ import CreateServicePage from "./pages/Create.Service.Page";
 import LoginServicePage from "./pages/Login.Service.Page";
 import DashboardPage from "./pages/Dashboard.Page";
 import BlankRedirectPage from "./pages/Blank.Redirect.Page";
-import { createContext } from "react";
-import service from "./hooks/Service.Hook";
-export const _serviceContext = createContext(service);
+import service from "./hooks/Service.Login.Information.Hook";
+import serviceContext from "./context/Service.Login.Information.Context";
 import ApiGuidePage from "./pages/Guide.Page";
-import NavigationBarComponent from "./components/Navigation.Bar.Component";
-import HeaderComponent from "./components/Header.Component";
-import SiteDeveloperNavigationComponent from "./components/Developer.Navigation.Div.Component";
-import OfflineCardComponent from "./components/Offline.Card.Component";
-import ServicesComponent from "./components/Services.Component";
-import WarningComponent from "./components/Warning.Component";
-import FooterComponent from "./components/Footer.Component";
 
 function App() {
-  return window.navigator.onLine ? (
-    <_serviceContext.Provider value={service}>
+  return (
+    <serviceContext.Provider value={service}>
       <Routes>
         <Route index element={<HomePage />}></Route>
         <Route
-          path="/api/system/guide"
+          path="/guide"
           element={service ? <ApiGuidePage /> : <LoginServicePage />}
         ></Route>
         <Route
@@ -39,19 +31,7 @@ function App() {
           element={service ? <DashboardPage /> : <BlankRedirectPage />}
         ></Route>
       </Routes>
-    </_serviceContext.Provider>
-  ) : (
-    <>
-      <_serviceContext.Provider value={service}>
-        <NavigationBarComponent />
-        <HeaderComponent />
-        <SiteDeveloperNavigationComponent />
-        <ServicesComponent />
-        <OfflineCardComponent />
-        <WarningComponent />
-        <FooterComponent />
-      </_serviceContext.Provider>
-    </>
+    </serviceContext.Provider>
   );
 }
 

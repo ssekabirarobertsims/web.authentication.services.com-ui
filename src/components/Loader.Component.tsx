@@ -5,7 +5,7 @@ const Loader: React.FC = () => {
     <aside className="loader-wrapper">
       <div className="spinner"></div>
     </aside>
-  );
+  ); 
 };
 
 export default Loader;
