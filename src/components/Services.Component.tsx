@@ -12,7 +12,7 @@ const ServicesComponent: React.FunctionComponent = () => {
      <article className="services-component">
         <aside>
             <article>
-                <img src="/service-1_hu_4789409556fdf1b4.webp" alt="" />
+                <img src="/photos/service-1_hu_4789409556fdf1b4.webp" alt="" />
             </article>
             <article>
                 <h1>

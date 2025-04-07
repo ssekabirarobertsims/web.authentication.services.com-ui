@@ -31,7 +31,7 @@ const HeaderComponent: React.FC = () => {
           </Link>
         </article>
         <article className="animation-wrapper">
-          <img src="/banner_hu_bd8330c75c01695c.webp" alt="" ref={photoRef} />
+          <img src="/photos/banner_hu_bd8330c75c01695c.webp" alt="" ref={photoRef} />
         </article>
       </header>
       <br />
