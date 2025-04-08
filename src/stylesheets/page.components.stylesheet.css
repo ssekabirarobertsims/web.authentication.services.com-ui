@@ -1,3 +1,4 @@
+/*  */
 section[class="create-service-page-component"] {
     min-height: 140vh;
     width: min(100%, 100%);
@@ -175,7 +176,6 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form :
 }
 
 
-
 /*  */
 section[class="log-into-service-page-component-wrapper"] {
     min-height: 60vh;
@@ -301,7 +301,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form :is(button) {
-    height: 4em;
+    height: 3.6em;
     width: min(95%, 15em);
     border: none;
     border-radius: .3em;
@@ -326,7 +326,7 @@ section[class="dashboard-page-component-wrapper"] {
 
 section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] {
     min-height: 260vh;
-    width: min(86%, 86%);
+    width: min(90%, 90%);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -715,4 +715,64 @@ article[class="services-component"]>aside :is(article) :is(ul) {
     color: hsl(0, 0%, 70%);
     gap: 1em;
     list-style: circle
+}
+
+/*  */
+.device-warning-message-component {
+    height: 100%;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    /* border: 1px solid red; */
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    z-index: 10;
+}
+
+.device-warning-message-component>div {
+    min-height: 20em;
+    width: min(90%, 40em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: .5em;
+    background-color: var(--dark-background);
+}
+
+.device-warning-message-component>div :is(article) {
+    min-height: 20em;
+    width: min(90%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.device-warning-message-component>div :is(article) :where(h1) {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.device-warning-message-component>div :is(article) :where(span) {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.device-warning-message-component>div :is(article) :where(p) {
+    font-weight: normal;
+    font-size: .9em;
+    line-height: 1.5em;
 }

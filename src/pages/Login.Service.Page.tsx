@@ -4,24 +4,28 @@ import FooterComponent from "../components/Footer.Component";
 import { useState } from "react";
 import ServiceLoginFunction from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
 const LoginServicePage: React.FunctionComponent = () => {
   const [service, setService] = useState("" as string);
   const [password, setPassword] = useState("" as string | number);
 
-  return ( 
+  return (
     <>
       <NavigationBarComponent />
       <Loader />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="log-into-service-page-component-wrapper">
         <article className="__wrapper">
           <br />
           <h1>Log Into Service</h1>
           <form action="" method="post">
+            <span className="service-warning-flag-wrapper-xyz">
+              <span className="warning-flag-xyz">hhhh</span>
+            </span>
             <div>
-              <span className="service-warning-flag-wrapper-xyz">
-                <span className="warning-flag">hhhh</span>
-              </span>
               <label htmlFor="service">1. Fill in the service name: </label>
               <input
                 type="text"
@@ -64,11 +68,16 @@ const LoginServicePage: React.FunctionComponent = () => {
               type="button"
               onClick={(event) => {
                 event.stopPropagation();
-                const Loader: HTMLElement = window.document.querySelector(".loader-wrapper") as HTMLElement;
+                const Loader: HTMLElement = window.document.querySelector(
+                  ".loader-wrapper"
+                ) as HTMLElement;
                 Loader.style.display = "flex";
                 ServiceLoginFunction(service, password);
 
-                window.setTimeout(() => Loader.style.display = "none", 4000 as number);
+                window.setTimeout(
+                  () => (Loader.style.display = "none"),
+                  4000 as number
+                );
               }}
             >
               Log Into Service

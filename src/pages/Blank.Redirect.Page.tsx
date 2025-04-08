@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlankRedirectPage: React.FC = () => {
+const BlankRedirectPage: React.FunctionComponent = () => {
   React.useEffect(() => {
     window.setTimeout(() => {
       window.location.href = "/service/login";
@@ -10,7 +10,7 @@ const BlankRedirectPage: React.FC = () => {
   return (
     <section className="blank-redirect-page">
       <h1>Service Registered Successfully</h1>
-      <p>Please wait as we are redirecting page...</p>
+      <p>Please wait a moment as we are redirecting page...</p>
     </section>
   );
 };

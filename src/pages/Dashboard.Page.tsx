@@ -24,15 +24,22 @@ interface Service {
 }
 
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
-const DashboardPage: React.FC = () => {
+const DashboardPage: React.FunctionComponent = () => {
   const service: Service = useContext(serviceContext) as unknown as Service;
 
   return (
     <>
       <NavigationBarComponent />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="dashboard-page-component-wrapper">
         <article className="__wrapper">
+          <h1>
+            {service?.data?.service ? service?.data?.service : "undefined"}
+          </h1>
           <div className="service-status-bars-wrapper">
             <div className="service-status-bar">
               <h1>Service Status</h1>
@@ -224,7 +231,9 @@ const DashboardPage: React.FC = () => {
                   <span>Service Api Link</span>
                 </div>
                 <div>
-                  <span>https://web-authentication-services-restapi.onrender.com/</span>
+                  <span>
+                    https://web-authentication-services-restapi.onrender.com/
+                  </span>
                 </div>
                 <button
                   type="button"
@@ -270,11 +279,13 @@ const DashboardPage: React.FC = () => {
 
                   window.setTimeout(() => {
                     (
-                      window.document.querySelector(".loader-wrapper") as HTMLSpanElement
+                      window.document.querySelector(
+                        ".loader-wrapper"
+                      ) as HTMLSpanElement
                     ).style.display = "none";
-              
-                   window.localStorage.removeItem("service_login_info");
-                   window.location.href = "/service/login";
+
+                    window.localStorage.removeItem("service_login_info");
+                    window.location.href = "/service/login";
                   }, 5000 as unknown as number);
                 }}
               >

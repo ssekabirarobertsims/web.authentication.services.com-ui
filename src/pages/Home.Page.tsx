@@ -6,8 +6,9 @@ import ServicesComponent from "../components/Services.Component";
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
 import WarningComponent from "../components/Warning.Component";
 import OfflineCardComponent from "../components/Offline.Card.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
-const HomePage: React.FC = () => {
+const HomePage: React.FunctionComponent = () => {
   return window.navigator.onLine ? (
     <>
       <NavigationBarComponent />
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
       <ServicesComponent />
       <WarningComponent />
       <FooterComponent />
+      <DeviceWarningMessageComponent />
     </>
   ) : (
     <>
@@ -26,6 +28,7 @@ const HomePage: React.FC = () => {
       <OfflineCardComponent />
       <WarningComponent />
       <FooterComponent />
+      <DeviceWarningMessageComponent />
     </>
   );
 };

@@ -5,8 +5,10 @@ import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import Loader from "../components/Loader.Component";
 import ServiceCreation from "../functions/Service.Create.Function";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
-const CreateServicePage: React.FC = () => {
+const CreateServicePage: React.FunctionComponent = () => {
   const [serviceName, setServiceName] = useState("" as string);
   const [servicePassword, setServicePassword] = useState("" as string);
   const [projectName, setProjectName] = useState("" as string);
@@ -18,6 +20,8 @@ const CreateServicePage: React.FC = () => {
     <>
       <NavigationBarComponent />
       <Loader />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="create-service-page-component">
         <article className="__wrapper">
           <h1>Register For A Service</h1>
@@ -25,7 +29,7 @@ const CreateServicePage: React.FC = () => {
             <article className="form-inputs-wrapper">
               <div>
                 <span className="service-warning-flag-wrapper-abc">
-                  <span className="warning-flag"></span>
+                  <span className="warning-flag-abc"></span>
                 </span>
                 <label htmlFor="service">1. Fill in the service name: </label>
                 <input
@@ -130,6 +134,11 @@ const CreateServicePage: React.FC = () => {
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation();
+                  const Loader: HTMLElement = window.document.querySelector(
+                    ".loader-wrapper"
+                  ) as HTMLElement;
+                  Loader.style.display = "flex";
+
                   ServiceCreation(
                     serviceName as string,
                     ownerUsername as string,
@@ -137,6 +146,11 @@ const CreateServicePage: React.FC = () => {
                     servicePassword as string,
                     projectName as string,
                     description as string
+                  );
+
+                  window.setTimeout(
+                    () => (Loader.style.display = "none"),
+                    4000 as number
                   );
                 }}
               >
