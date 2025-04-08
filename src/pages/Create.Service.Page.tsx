@@ -5,8 +5,10 @@ import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import Loader from "../components/Loader.Component";
 import ServiceCreation from "../functions/Service.Create.Function";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
-const CreateServicePage: React.FC = () => {
+const CreateServicePage: React.FunctionComponent = () => {
   const [serviceName, setServiceName] = useState("" as string);
   const [servicePassword, setServicePassword] = useState("" as string);
   const [projectName, setProjectName] = useState("" as string);
@@ -18,6 +20,8 @@ const CreateServicePage: React.FC = () => {
     <>
       <NavigationBarComponent />
       <Loader />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="create-service-page-component">
         <article className="__wrapper">
           <h1>Register For A Service</h1>

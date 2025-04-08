@@ -2,11 +2,15 @@ import React from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
-const ApiGuidePage: React.FC = () => {
+const ApiGuidePage: React.FunctionComponent = () => {
   return (
     <>
       <NavigationBarComponent />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="guide-page-component">
         <article>
           <h1>Full Guide For Api</h1>

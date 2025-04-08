@@ -9,7 +9,7 @@ interface LinkInterface {
   value: string;
 }
 
-const FooterComponent: React.FC = () => {
+const FooterComponent: React.FunctionComponent = () => {
   const [content, setContent] = React.useState([
     {
       id: uuid() as string,

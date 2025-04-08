@@ -19,7 +19,7 @@ function App() {
         ></Route>
         <Route
           path="/service/registration"
-          element={<CreateServicePage />}
+          element={service ? <DashboardPage /> : <CreateServicePage />}
         ></Route>
         <Route path="/service/login" element={<LoginServicePage />}></Route>
         <Route

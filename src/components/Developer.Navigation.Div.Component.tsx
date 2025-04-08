@@ -1,6 +1,6 @@
 import React from "react";
 
-const SiteDeveloperNavigationComponent: React.FC = () => {
+const SiteDeveloperNavigationComponent: React.FunctionComponent = () => {
   return (
     <>
         <div className="site-developer-navigation-component">

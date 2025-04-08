@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { GiAstronautHelmet } from "react-icons/gi";
+import DdMenuComponent from "./Dd.Menu.Component";
 
-const NavigationBarComponent: React.FC = () => {
+const NavigationBarComponent: React.FunctionComponent = () => {
   const buttonRef = useRef(null);
 
   return (
@@ -55,6 +56,7 @@ const NavigationBarComponent: React.FC = () => {
           >
               <button type="button" ref={buttonRef}>Sign Up</button>
           </Link>
+          <DdMenuComponent />
       </aside>
     </nav>
   );

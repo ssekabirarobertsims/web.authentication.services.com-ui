@@ -30,7 +30,7 @@ const CookiesWarningComponent: React.FunctionComponent = () => {
             sunt nesciunt possimus exercitationem, molestias unde, expedita ut
             enim quae similique dolores. Facilis at temporibus minima
             blanditiis, corrupti perferendis tenetur dignissimos vitae ex
-            .
+            quisquam aperiam veniam ipsum nesciunt.
           </p>
             <button
               type="button"

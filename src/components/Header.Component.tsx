@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import Loader from "./Loader.Component";
 import CookiesWarningComponent from "./Cookies.Warning.Component";
 
-const HeaderComponent: React.FC = () => {
+const HeaderComponent: React.FunctionComponent = () => {
   const content = React.useRef(
     "The ultimate starter web authentication api free services for your project."
   );

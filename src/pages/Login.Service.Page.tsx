@@ -4,6 +4,8 @@ import FooterComponent from "../components/Footer.Component";
 import { useState } from "react";
 import ServiceLoginFunction from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
+import CookiesWarningComponent from "../components/Cookies.Warning.Component";
+import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
 
 const LoginServicePage: React.FunctionComponent = () => {
   const [service, setService] = useState("" as string);
@@ -13,6 +15,8 @@ const LoginServicePage: React.FunctionComponent = () => {
     <>
       <NavigationBarComponent />
       <Loader />
+      <CookiesWarningComponent />
+      <DeviceWarningMessageComponent />
       <section className="log-into-service-page-component-wrapper">
         <article className="__wrapper">
           <br />
