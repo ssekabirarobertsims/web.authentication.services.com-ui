@@ -134,7 +134,9 @@ const CreateServicePage: React.FunctionComponent = () => {
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation();
-                  const Loader: HTMLElement = window.document.querySelector(".loader-wrapper") as HTMLElement;
+                  const Loader: HTMLElement = window.document.querySelector(
+                    ".loader-wrapper"
+                  ) as HTMLElement;
                   Loader.style.display = "flex";
 
                   ServiceCreation(
@@ -146,7 +148,10 @@ const CreateServicePage: React.FunctionComponent = () => {
                     description as string
                   );
 
-                  window.setTimeout(() => Loader.style.display = "none", 4000 as number);
+                  window.setTimeout(
+                    () => (Loader.style.display = "none"),
+                    4000 as number
+                  );
                 }}
               >
                 Create Service

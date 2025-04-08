@@ -25,27 +25,27 @@ const CookiesWarningComponent: React.FunctionComponent = () => {
           <h2>Site Cookies Settings</h2>
           <p>
             Web authentication developer tool uses cookies to improve on the
-            functionality of this developer tool. Allowing cookies can be
-            help to boost performance and improve user experiences
-            sunt nesciunt possimus exercitationem, molestias unde, expedita ut
-            enim quae similique dolores. Facilis at temporibus minima
-            blanditiis, corrupti perferendis tenetur dignissimos vitae ex
-            quisquam aperiam veniam ipsum nesciunt.
+            functionality of this developer tool. Allowing cookies can be help
+            to boost performance and improve user experiences sunt nesciunt
+            possimus exercitationem, molestias unde, expedita ut enim quae
+            similique dolores. Facilis at temporibus minima blanditiis, corrupti
+            perferendis tenetur dignissimos vitae ex quisquam aperiam veniam
+            ipsum nesciunt.
           </p>
-            <button
-              type="button"
-              ref={buttonReference.current}
-              onClick={(event) => {
-                event.stopPropagation();
-                AllowSiteCookies(
-                  window.document.querySelector(
-                    ".site-main-page-cookies-warning-component"
-                  ) as HTMLElement
-                );
-              }}
-            >
-              Allow Cookies
-            </button>
+          <button
+            type="button"
+            ref={buttonReference.current}
+            onClick={(event) => {
+              event.stopPropagation();
+              AllowSiteCookies(
+                window.document.querySelector(
+                  ".site-main-page-cookies-warning-component"
+                ) as HTMLElement
+              );
+            }}
+          >
+            Allow Cookies
+          </button>
         </article>
       </aside>
     </>

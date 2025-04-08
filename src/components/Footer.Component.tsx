@@ -66,7 +66,10 @@ const FooterComponent: React.FunctionComponent = () => {
             <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
               <li>Database Engineer</li>
             </a>
-            <a href="https://web-authentication-services-restapi.onrender.com/" target="_blank">
+            <a
+              href="https://web-authentication-services-restapi.onrender.com/"
+              target="_blank"
+            >
               <li>API</li>
             </a>
             <a href="http://stacktechnologies.netlify.app" target="_blank">
@@ -81,7 +84,7 @@ const FooterComponent: React.FunctionComponent = () => {
               to={{
                 pathname: "",
               }}
-            > 
+            >
               <li>Terms</li>
             </Link>
             <Link

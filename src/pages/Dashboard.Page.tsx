@@ -38,9 +38,7 @@ const DashboardPage: React.FunctionComponent = () => {
       <section className="dashboard-page-component-wrapper">
         <article className="__wrapper">
           <h1>
-            {
-              service?.data?.service ? service?.data?.service : "undefined"
-            }
+            {service?.data?.service ? service?.data?.service : "undefined"}
           </h1>
           <div className="service-status-bars-wrapper">
             <div className="service-status-bar">
@@ -233,7 +231,9 @@ const DashboardPage: React.FunctionComponent = () => {
                   <span>Service Api Link</span>
                 </div>
                 <div>
-                  <span>https://web-authentication-services-restapi.onrender.com/</span>
+                  <span>
+                    https://web-authentication-services-restapi.onrender.com/
+                  </span>
                 </div>
                 <button
                   type="button"
@@ -279,11 +279,13 @@ const DashboardPage: React.FunctionComponent = () => {
 
                   window.setTimeout(() => {
                     (
-                      window.document.querySelector(".loader-wrapper") as HTMLSpanElement
+                      window.document.querySelector(
+                        ".loader-wrapper"
+                      ) as HTMLSpanElement
                     ).style.display = "none";
-              
-                   window.localStorage.removeItem("service_login_info");
-                   window.location.href = "/service/login";
+
+                    window.localStorage.removeItem("service_login_info");
+                    window.location.href = "/service/login";
                   }, 5000 as unknown as number);
                 }}
               >

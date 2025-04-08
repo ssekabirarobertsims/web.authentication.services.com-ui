@@ -28,7 +28,7 @@ const HomePage: React.FunctionComponent = () => {
       <OfflineCardComponent />
       <WarningComponent />
       <FooterComponent />
-    <DeviceWarningMessageComponent />
+      <DeviceWarningMessageComponent />
     </>
   );
 };
