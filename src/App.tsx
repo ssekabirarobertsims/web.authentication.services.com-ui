@@ -24,7 +24,7 @@ function App() {
         <Route path="/service/login" element={<LoginServicePage />}></Route>
         <Route
           path="/dashboard"
-          element={!service ? <DashboardPage /> : <LoginServicePage />}
+          element={service ? <DashboardPage /> : <LoginServicePage />}
         ></Route>
         <Route
           path="/authentication/redirect/blank/authorization/page-1"
