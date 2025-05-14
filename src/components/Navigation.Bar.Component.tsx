@@ -4,7 +4,7 @@ import { GiAstronautHelmet } from "react-icons/gi";
 import DdMenuComponent from "./Dd.Menu.Component";
 
 const NavigationBarComponent: React.FunctionComponent = () => {
-  const buttonRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <nav>

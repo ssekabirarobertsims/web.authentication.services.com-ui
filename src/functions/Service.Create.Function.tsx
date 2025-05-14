@@ -1,44 +1,43 @@
+import axios from "axios";
+
 async function ServiceCreation(
+  responseMessagePlaceholderWrapper: HTMLSpanElement,
+  responseMessagePlaceholder: HTMLSpanElement,
   service?: string | unknown,
   username?: string | unknown,
   email?: string | unknown,
   password?: string | unknown,
   project?: string | unknown,
-  description?: string | unknown
+  description?: string | unknown,
 ) {
-  const responseMessagePlaceholderWrapper: HTMLSpanElement = window.document.querySelector(".service-warning-flag-wrapper-abc") as HTMLSpanElement;
-  const responseMessagePlaceholder: HTMLSpanElement = window.document.querySelector(".warning-flag-abc") as HTMLSpanElement;
-
-  try {
-    const request = await fetch(
-      "https://web-authentication-services-restapi.onrender.com/api/service/registration",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          service: service as string, 
-          owner_username: username as string,
-          owner_email: email as string,
-          service_password: password as string,
-          project: project as string,
-          description: description as string,
-        }),
-      }
-    );
   
-    const response = await request.json();
+  try {
+    // "https://web-authentication-services-restapi.onrender.com/api/service/registration",
+    const { data: response } = await axios.post("http://localhost:3000/api/service/registration", {
+        service: service as string, 
+        owner_username: username as string,
+        owner_email: email as string,
+        service_password: password as string,
+        project: project as string,
+        description: description as string,
+    }, {
+      headers: {
+        "Content-Type": "Application/json",
+        "Authorization": ""
+      }
+    })
+  
     const responseMessagePlaceholderWrapper: HTMLSpanElement = window.document.querySelector(".service-warning-flag-wrapper-abc") as HTMLSpanElement;
     
-    if (!request.ok) {
+    console.log(response)
+    if (response.status_code === Number(200) as Required<number>) {
+    console.log(response)
       responseMessagePlaceholderWrapper.style.display = "flex";
       responseMessagePlaceholder.textContent = response?.message ? response?.message : "Failed to send request!";
-  
     } else {
+    console.log(response)
       responseMessagePlaceholderWrapper.style.display = "none";
-  
-      window.setTimeout(() => window.location.href = "/authentication/redirect/blank/authorization/page-1" as string, 2500 as number);
+      window.setTimeout(() => window.location.href = "/authentication/redirect/blank/authorization/page-1" as Required<string>, 2500 as Required<number>);
     }
   } catch (error) {
       console.error(error);

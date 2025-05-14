@@ -4,7 +4,7 @@ const SiteDeveloperNavigationComponent: React.FunctionComponent = () => {
   return (
     <>
       <div className="site-developer-navigation-component">
-        <p>Need help from me?</p>
+        <a href="" id="link"><p>Need help from me?</p></a>
         <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
           <img src="/photos/ssekabirarobertsims-2.png" alt="" />
         </a>

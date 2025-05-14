@@ -1,19 +1,56 @@
 import React from "react";
-import NavigationBarComponent from "../components/Navigation.Bar.Component";
-import FooterComponent from "../components/Footer.Component";
 import { useState } from "react";
-import ServiceLoginFunction from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
 import CookiesWarningComponent from "../components/Cookies.Warning.Component";
 import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
+import SecondaryNavigationBarComponent from "../components/Secondary.Dashboard.Component";
+import axios from "axios";
 
 const LoginServicePage: React.FunctionComponent = () => {
   const [service, setService] = useState("" as string);
   const [password, setPassword] = useState("" as string | number);
+  const responseMessagePlaceholder: HTMLSpanElement = window.document.querySelector(".warning-flag-xyz") as HTMLSpanElement;
+  const [responseMessage, setResponseMessage] = useState<string>("");
+  
+  async function HandleServiceLogin(): Promise<void> {
+
+    // https://web-authentication-services-restapi.onrender.com/api/service/login
+  try {
+    const { data: response } = await axios.post("http://localhost:3000/api/service/login", {
+        service: service,
+        service_password: password,
+    }, {
+      headers: {
+        "Content-Type": "Application/json",
+        "Authorization": ""
+      }
+    });
+  
+    setResponseMessage(response.message);
+
+    if (response.status_code !== Number(200) as Required<number>) {
+      responseMessagePlaceholder.textContent = response?.message ? responseMessage : responseMessage;
+    } else {
+      setResponseMessage(response.message);
+      window.localStorage.setItem(
+        "service_login_info",
+        window.encodeURIComponent(JSON.stringify(response))
+      );
+
+      responseMessagePlaceholder.textContent = response?.message ? responseMessage : responseMessage;
+      window.setTimeout(() => window.location.href = "/dashboard" as Required<string>, 2500 as Required<number>);
+    }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    console.error(error);
+    responseMessagePlaceholder.textContent = error?.response?.data?.message as Required<Readonly<string>>;
+    throw new Error("Failed to send request to server, check network connection plz!"); 
+  }
+} 
 
   return (
     <>
-      <NavigationBarComponent />
+      <SecondaryNavigationBarComponent />
       <Loader />
       <CookiesWarningComponent />
       <DeviceWarningMessageComponent />
@@ -22,9 +59,7 @@ const LoginServicePage: React.FunctionComponent = () => {
           <br />
           <h1>Log Into Service</h1>
           <form action="" method="post">
-            <span className="service-warning-flag-wrapper-xyz">
-              <span className="warning-flag-xyz">hhhh</span>
-            </span>
+            <span className="warning-flag-xyz"></span>
             <div>
               <label htmlFor="service">1. Fill in the service name: </label>
               <input
@@ -32,7 +67,7 @@ const LoginServicePage: React.FunctionComponent = () => {
                 name="service"
                 id="service"
                 required
-                aria-required
+                aria-required="true"
                 placeholder=""
                 aria-placeholder=""
                 onChange={(event) => {
@@ -50,7 +85,7 @@ const LoginServicePage: React.FunctionComponent = () => {
                 name="service_password"
                 id="service_password"
                 required
-                aria-required
+                aria-required="true"
                 placeholder=""
                 aria-placeholder=""
                 onChange={(event) => {
@@ -60,8 +95,8 @@ const LoginServicePage: React.FunctionComponent = () => {
               />
             </div>
             <p>
-              New to web authentication services?{" "}
-              <a href="/service/registration">Register a new service</a>
+              New to web authentication services?{" "} 
+              <a href="/service/registration">Create a new service</a>
             </p>
             <br />
             <button
@@ -72,7 +107,7 @@ const LoginServicePage: React.FunctionComponent = () => {
                   ".loader-wrapper"
                 ) as HTMLElement;
                 Loader.style.display = "flex";
-                ServiceLoginFunction(service, password);
+                HandleServiceLogin();
 
                 window.setTimeout(
                   () => (Loader.style.display = "none"),
@@ -85,11 +120,6 @@ const LoginServicePage: React.FunctionComponent = () => {
           </form>
         </article>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <FooterComponent />
     </>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import NavigationBarComponent from "../components/Navigation.Bar.Component";
 import FooterComponent from "../components/Footer.Component";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoCopyOutline } from "react-icons/io5";
@@ -12,6 +11,7 @@ interface Service {
   data: {
     api_key: string;
     login_date: string;
+    _date: string;
     owner: string;
     owner_email: string;
     service: string;
@@ -26,28 +26,29 @@ interface Service {
 import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
 import CookiesWarningComponent from "../components/Cookies.Warning.Component";
 import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
+import ServiceDashboardNavigationBarComponent from "../components/Dashboard.Navigation.Bar.Component";
+import { TbLiveView } from "react-icons/tb";
 
 const DashboardPage: React.FunctionComponent = () => {
   const service: Service = useContext(serviceContext) as unknown as Service;
 
   return (
     <>
-      <NavigationBarComponent />
+      <ServiceDashboardNavigationBarComponent />
       <CookiesWarningComponent />
       <DeviceWarningMessageComponent />
       <section className="dashboard-page-component-wrapper">
         <article className="__wrapper">
-          <h1>
-            {service?.data?.service ? service?.data?.service : "undefined"}
-          </h1>
           <div className="service-status-bars-wrapper">
             <div className="service-status-bar">
-              <h1>Service Status</h1>
+               <h1>
+            {service?.data?.service ? service?.data?.service : "undefined"}
+          </h1>
+          <span>Hosted on {service?.data?._date} <button type="button" disabled className="service_status"><TbLiveView /> running</button></span>
               <p>
-                <RiErrorWarningLine /> Your service is currently live and
-                running at this very moment!
+               Hosted by Web Authentication Services
               </p>
-              <button type="button">Upgrade</button>
+              <button type="button">Service running</button>
             </div>
           </div>
           <br />
@@ -207,46 +208,6 @@ const DashboardPage: React.FunctionComponent = () => {
                   <IoCopyOutline />
                 </button>
               </li>
-              <li>
-                <div>
-                  <span>Service Host</span>
-                </div>
-                <div>
-                  <span>Web Authentication Services</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    window.navigator.clipboard.writeText(
-                      "Web Authentication Services" as string
-                    );
-                  }}
-                >
-                  <IoCopyOutline />
-                </button>
-              </li>
-              <li>
-                <div>
-                  <span>Service Api Link</span>
-                </div>
-                <div>
-                  <span>
-                    https://web-authentication-services-restapi.onrender.com/
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    window.navigator.clipboard.writeText(
-                      "https://web-authentication-services-restapi.onrender.com/" as string
-                    );
-                  }}
-                >
-                  <IoCopyOutline />
-                </button>
-              </li>
             </ul>
           </div>
           <br />
@@ -264,7 +225,7 @@ const DashboardPage: React.FunctionComponent = () => {
             <div className="danger-zone-wrapper">
               <h1>Service Logout</h1>
               <p>
-                Once you log out of the service, you can be able to login again.
+                Once you log out of the service, you can be able to login again at any time, no service information will be lost.
               </p>
               <button
                 type="button"
@@ -296,7 +257,7 @@ const DashboardPage: React.FunctionComponent = () => {
               <span className="warning-flag-wrapper">
                 <span className="warning-flag"></span>
               </span>
-              <p>Once the service is deleted, the action is irreversible.</p>
+              <p>Once the service is deleted, the action is irreversible and all registered user accounts under this service will be lost including all saved emails and service Information Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laborum cum illo doloribus temporibus est soluta, ut dolor inventore nam.</p>
               <button
                 type="button"
                 onClick={async (event) => {
