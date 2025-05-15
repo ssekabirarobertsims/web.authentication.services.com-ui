@@ -1,12 +1,12 @@
 import React from "react";
-import NavigationBarComponent from "../components/Navigation.Bar.Component";
-import FooterComponent from "../components/Footer.Component";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import Loader from "../components/Loader.Component";
-import ServiceCreation from "../functions/Service.Create.Function";
 import CookiesWarningComponent from "../components/Cookies.Warning.Component";
 import DeviceWarningMessageComponent from "../components/Device.Warning.Message.Component";
+import axios from "axios";
+import SiteDeveloperNavigationComponent from "../components/Developer.Navigation.Div.Component";
+import SecondaryNavigationBarComponent from "../components/Secondary.Dashboard.Component";
 
 const CreateServicePage: React.FunctionComponent = () => {
   const [serviceName, setServiceName] = useState("" as string);
@@ -15,13 +15,54 @@ const CreateServicePage: React.FunctionComponent = () => {
   const [ownerUsername, setOwnerUsername] = useState("" as string);
   const [ownerEmail, setOwnerEmail] = useState("" as string);
   const description: string = "" as string;
+  const responseMessagePlaceholder: HTMLSpanElement = window.document.querySelector(".warning-flag-abc") as HTMLSpanElement;
+  const [responseMessage, setResponseMessage] = useState<string>("");
+
+async function HandleServiceCreate(): Promise<void> {
+  
+  try {
+    // "https://web-authentication-services-restapi.onrender.com/api/service/registration",
+    const { data: response } = await axios.post("http://localhost:3000/api/service/registration", {
+        service: serviceName as string, 
+        owner_username: ownerUsername as string,
+        owner_email: ownerEmail as string,
+        service_password: servicePassword as string,
+        project: projectName as string,
+        description: description as string,
+    }, {
+      headers: {
+        "Content-Type": "Application/json",
+        "Authorization": ""
+      }
+    });
+  
+    // console.log(response.data)
+    if (response.status_code !== Number(201) as Required<number>) {
+      console.log(response)
+      setResponseMessage(response.message);
+      responseMessagePlaceholder.textContent = response?.message ? responseMessage : "Failed to send request!";
+    } else {
+    // console.log(response.data)
+      setResponseMessage(response.message);
+      window.setTimeout(() => (window.location.href = "/authentication/redirect/blank/authorization/page-1" as Required<string>), 2500 as Required<number>);
+    }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+      console.error(error);
+      responseMessagePlaceholder.textContent = error?.response?.data?.message;
+      throw new Error("Failed to send request to server, check network connection plz!"); 
+  }
+}
+
+console.log(responseMessage)
 
   return (
     <>
-      <NavigationBarComponent />
+      <SecondaryNavigationBarComponent />
       <Loader />
       <CookiesWarningComponent />
       <DeviceWarningMessageComponent />
+      <SiteDeveloperNavigationComponent />
       <section className="create-service-page-component">
         <article className="__wrapper">
           <h1>Register For A Service</h1>
@@ -124,8 +165,7 @@ const CreateServicePage: React.FunctionComponent = () => {
               <aside>
                 <div>
                   <p className="alert">
-                    <RiErrorWarningLine /> Once the service is created, it cant
-                    be edited!
+                    <RiErrorWarningLine /> Please make sure you provide a valid email account for the service owner!
                   </p>
                 </div>
               </aside>
@@ -138,15 +178,9 @@ const CreateServicePage: React.FunctionComponent = () => {
                     ".loader-wrapper"
                   ) as HTMLElement;
                   Loader.style.display = "flex";
+                  // console.log("eee")
 
-                  ServiceCreation(
-                    serviceName as string,
-                    ownerUsername as string,
-                    ownerEmail as string,
-                    servicePassword as string,
-                    projectName as string,
-                    description as string
-                  );
+                  HandleServiceCreate();
 
                   window.setTimeout(
                     () => (Loader.style.display = "none"),
@@ -181,7 +215,6 @@ const CreateServicePage: React.FunctionComponent = () => {
           </form>
         </article>
       </section>
-      <FooterComponent />
     </>
   );
 };

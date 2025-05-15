@@ -6,7 +6,7 @@ import { BiMenu } from "react-icons/bi";
 import OpenDropDownMenu from "../functions/Open.Dd.Menu.Function";
 
 const NavigationBarComponent: React.FunctionComponent = () => {
-  const buttonRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <nav>

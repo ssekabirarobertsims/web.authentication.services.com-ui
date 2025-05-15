@@ -58,7 +58,7 @@ const FooterComponent: React.FunctionComponent = () => {
           </ul>
         </aside>
         <aside>
-          <h1>Developers & Engineers</h1>
+          <h1>Developers & More</h1>
           <ul>
             <a href="http://ssekabirarobertsims.netlify.app" target="_blank">
               <li>Developer</li>

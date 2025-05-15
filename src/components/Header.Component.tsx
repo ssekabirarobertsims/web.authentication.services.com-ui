@@ -7,8 +7,8 @@ const HeaderComponent: React.FunctionComponent = () => {
   const content = React.useRef(
     "The ultimate starter web authentication api free services for your project."
   );
-  const buttonRef = useRef(null);
-  const photoRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const photoRef = useRef<HTMLImageElement>(null);
 
   return (
     <>
@@ -18,7 +18,7 @@ const HeaderComponent: React.FunctionComponent = () => {
           <p>
             Handle and make safe and secure authentications for users for your
             ui sites design without handling any backend codes with just one
-            platform in one secure place like this.
+            platform in one secure and safest place like this.
           </p>
           <Link
             to={{

@@ -14,7 +14,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
       <section className="guide-page-component">
         <article>
           <h1>Full Guide For Api</h1>
-          <strong>How to Use an API for Authentication Services</strong>
+          <strong>How to use an API for authentication services</strong>
           <p>
             APIs that provide authentication services help developers secure
             their applications by verifying user identities. These APIs handle
@@ -23,7 +23,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
             effectively.
           </p>
           <br />
-          <strong>1. Setting Up API Authentication</strong>
+          <strong>1. Setting up API authentication</strong>
           <p>
             {" "}
             Before integrating an authentication API service, you need to sign
@@ -34,20 +34,20 @@ const ApiGuidePage: React.FunctionComponent = () => {
             endpoints.
           </p>
           <br />
-          <strong>2. User Registration</strong>
+          <strong>2. User registration</strong>
           <p>
             To allow users to create accounts, send a POST request to the API’s
             registration endpoint. Example: POST /api/user/account/signup
             Content-Type: application/json and make sure to include
             YOUR_ACCESS_SECRETE_KEY in the authorization headers for each
-            request sent to the server.
+            request sent to the server and your service id withing the request body.
           </p>
           <p>
             The API responds with a success message or an error if validation
             fails.
           </p>
           <br />
-          <strong>3. User Login</strong>
+          <strong>3. User login</strong>
           <p>
             Users log in by providing their credentials that include the email
             and password. Send a POST request to the login endpoint and make
@@ -62,7 +62,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
             single user.
           </p>
           <br />
-          <strong>4. Handling Authentication Tokens</strong>
+          <strong>4. Handling authentication tokens</strong>
           <p>
             Secrete tokens or api keys must be included in each request to
             access protected resources. This is typically done via an
@@ -78,7 +78,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
             with an authentication error, prompting the user to log in again.
           </p>
           <br />
-          <strong>5. Token Refresh and Logout</strong>
+          <strong>5. Token refresh and logout</strong>
           <p>
             Some APIs provide a token refresh mechanism to extend user sessions
             without requiring re-login:
@@ -89,7 +89,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
           <p>For logout, invalidate the token:</p>
           <p>POST /api/logout Authorization: Bearer YOUR_ACCESS_TOKEN</p>
           <br />
-          <strong>6. Securing API Requests</strong>
+          <strong>6. Securing API requests</strong>
           <p>Always use HTTPS to encrypt communication.</p>
           <p>
             Store tokens securely (e.g., HTTP-only cookies, secure local
@@ -110,7 +110,7 @@ const ApiGuidePage: React.FunctionComponent = () => {
           </p>
           <p>
             For further details, refer to the API’s developer{" "}
-            <a href="" target="_blankhttps://robertsims.netlify.app/">
+            <a href="https://ssekabirarobertsims.netlify.app/" target="_blank">
               robert sims
             </a>
             .
