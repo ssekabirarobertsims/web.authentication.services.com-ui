@@ -109,10 +109,14 @@ nav[class="secondary-navigation-bar"] :is(aside) {
 }
 nav[class="secondary-navigation-bar"] :is(aside) > a {
  text-decoration: none;
-  color: #fff;
+  color: #fff !important;
 }
 nav[class="secondary-navigation-bar"] :is(aside) > a span {
  text-decoration: none;
+  color: #fff !important;
+}
+
+span {
   color: #fff;
 }
 

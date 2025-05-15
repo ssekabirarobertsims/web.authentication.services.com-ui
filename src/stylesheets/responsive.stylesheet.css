@@ -32,11 +32,145 @@ header article[class="header-content-wrapper"] a :is(button) {
 }
 
 /*  */
+section[class="create-service-page-component"] {
+    min-height: 200vh !important;
+}
+
+/*  */
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
+    min-height: 35em !important;
+}
+
+/*  */
 footer {
   min-height: 120vh;
 }
 
 footer article>aside {
   min-height: 35vh
+}
+}
+
+/*  */
+@media all and (min-width: 421px) and (max-width: 768px) {
+    nav :is(aside)>article :where(ul) {
+        display: none;
+    }
+    nav :is(aside)>a {
+  display: none;
+}
+nav :is(aside)>article :where(span) {
+  font-size: .8em;
+}
+nav[class="secondary-navigation-bar"] :is(aside) > a {
+ text-decoration: none;
+  color: #fff !important;
+}
+nav[class="secondary-navigation-bar"] :is(aside) > a span {
+ text-decoration: none;
+  color: #fff !important;
+}
+
+/*  */
+header {
+    min-height: 120vh;
+  /* gap: 2em; */
+}
+header article[class="animation-wrapper"]>img {
+  height: 25em;
+  width: 35em;
+}
+header article[class="header-content-wrapper"] :is(span) {
+  font-size: 2.2em;
+}
+header article[class="header-content-wrapper"] :is(p) {
+  font-size: .9em;
+}
+header article[class="header-content-wrapper"] a :is(button) {
+  height: 3.2em;
+  width: 13em;
+}
+
+/*  */
+section[class="create-service-page-component"] {
+    min-height: 200vh !important;
+}
+
+/*  */
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
+    min-height: 28em !important;
+}
+
+/*  */
+footer {
+  min-height: 120vh;
+}
+
+footer article>aside {
+  min-height: 35vh
+}
+}
+
+/*  */
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    nav :is(aside)>article :where(ul) {
+        display: none;
+    }
+    nav :is(aside)>a {
+  display: none;
+}
+nav :is(aside)>article :where(span) {
+  font-size: .8em;
+}
+nav[class="secondary-navigation-bar"] :is(aside) > a {
+ text-decoration: none;
+  color: #fff !important;
+}
+nav[class="secondary-navigation-bar"] :is(aside) > a span {
+ text-decoration: none;
+  color: #fff !important;
+}
+
+/*  */
+header {
+    min-height: 120vh;
+  /* gap: 2em; */
+}
+header article[class="animation-wrapper"]>img {
+  height: 30em;
+  width: 40em;
+}
+header article[class="header-content-wrapper"] :is(span) {
+  font-size: 2.5em;
+}
+header article[class="header-content-wrapper"] :is(p) {
+  font-size: .9em;
+}
+header article[class="header-content-wrapper"] a :is(button) {
+  height: 3.5em;
+  width: 15em;
+}
+
+/*  */
+section[class="create-service-page-component"] {
+    min-height: 200vh !important;
+}
+section[class="create-service-page-component"] article[class="__wrapper"]>form {
+    min-height: 90vh;
+    gap: 0em;
+}
+
+/*  */
+section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
+    min-height: 25em !important;
+}
+
+/*  */
+footer {
+  min-height: 80vh;
+}
+
+footer article>aside {
+  min-height: 30vh
 }
 }

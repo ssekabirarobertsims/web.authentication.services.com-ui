@@ -322,6 +322,7 @@ const DashboardPage: React.FunctionComponent = () => {
       <Loader />
       <SiteDeveloperNavigationComponent />
       <LogoutFormComponent />
+      <br />
       <FooterComponent />
     </>
   );

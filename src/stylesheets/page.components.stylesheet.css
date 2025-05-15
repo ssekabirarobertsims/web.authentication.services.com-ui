@@ -8,7 +8,7 @@ section[class="create-service-page-component"] {
     flex-direction: column;
     gap: 1em;
     background-color: transparent;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(140, 0, 255); */
 }
 
 section[class="create-service-page-component"] article[class="__wrapper"] {
@@ -20,7 +20,7 @@ section[class="create-service-page-component"] article[class="__wrapper"] {
     flex-direction: column;
     gap: 2em;
     background-color: transparent;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(0, 255, 234); */
 }
 
 section[class="create-service-page-component"] article[class="__wrapper"]>h1 {
@@ -41,7 +41,7 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form {
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 3em;
     background-color: transparent;
     /* border: 1px solid red; */
@@ -49,7 +49,7 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form {
 
 section[class="create-service-page-component"] article[class="__wrapper"]>form :is(article[class="form-inputs-wrapper"]) {
     min-height: 100vh;
-    width: 42em;
+    width: min(100%, 42em);
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -121,7 +121,7 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form :
 
 section[class="create-service-page-component"] article[class="__wrapper"]>form :is(article[class="form-side-bar"]) {
     min-height: 75vh;
-    width: 20em;
+    width: min(100%, 20em);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,6 +131,7 @@ section[class="create-service-page-component"] article[class="__wrapper"]>form :
     border: 1px solid hsl(0, 0%, 30%);
     border-radius: .5em;
     background-color: hsl(0, 0%, 9%);
+    flex-grow: 1;
 }
 
 section[class="create-service-page-component"] article[class="__wrapper"]>form :is(article[class="form-side-bar"])>aside {
@@ -557,7 +558,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
 }
 
 section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) {
-    height: 22em;
+    min-height: 22em;
     width: min(100%, 100%);
     display: flex;
     justify-content: center;
@@ -571,7 +572,7 @@ section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is
 
 section[class="dashboard-page-component-wrapper"] article[class="__wrapper"] :is(div[class="danger-zone"]) div[class="danger-zone-wrapper"] {
     min-height: 17em;
-    width: min(97%, 97%);
+    width: min(95%, 95%);
     display: flex;
     justify-content: center;
     align-items: flex-start;

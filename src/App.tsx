@@ -20,7 +20,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route
           path="/guide"
-          element={!service ? <ApiGuidePage /> : <LoginServicePage />}
+          element={service ? <ApiGuidePage /> : <LoginServicePage />}
         />
         <Route
           path="/service/registration"
