@@ -1,9 +1,9 @@
 const OpenDropDownMenu = (): void => {
   const element: HTMLElement = window.document.querySelector(
-    ".dd-menu-wrapper"
+    ".dd-menu-component"
   ) as HTMLElement as HTMLElement;
 
-  element.style.width = "min(100%, 100%)";
+  element.style.display = "flex";
 };
 
 export default OpenDropDownMenu;

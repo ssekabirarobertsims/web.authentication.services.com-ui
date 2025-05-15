@@ -233,6 +233,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form>p {
     color: hsl(0, 0%, 90%);
     max-width: 60em;
+    text-align: left;
 }
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form>p a {
@@ -255,7 +256,7 @@ section[class="log-into-service-page-component-wrapper"] article[class="__wrappe
 
 section[class="log-into-service-page-component-wrapper"] article[class="__wrapper"]>form :is(div) input {
     height: 3.5em;
-    width: min(90%, 56em);
+    width: min(100%, 56em);
     /* border: none; */
     border: none;
     outline-style: none;
@@ -675,24 +676,26 @@ article[class="services-component"]>aside {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 4em;
 }
 
 article[class="services-component"]>aside :is(article) {
     min-height: 25em;
-    width: 40em;
+    width: min(100%, 35.5em);
     /* border: 1px solid red; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 1.5em;
+    flex-grow: 1;
 }
 
 article[class="services-component"]>aside :is(article) :is(img) {
     height: 25em;
-    width: 38em;
+    width: min(100%, 100%);
+    flex-grow: 1;
     /* border: 1px solid red; */
 }
 
@@ -721,7 +724,7 @@ article[class="services-component"]>aside :is(article) :is(ul) {
 .device-warning-message-component {
     height: 100%;
     width: min(100%, 100%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;

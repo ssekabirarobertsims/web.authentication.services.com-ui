@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { CgClose } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { v4 } from "uuid";
+import CloseDropDownMenu from "../functions/Close.Dd.Menu.Function";
 
 interface MenuValuePropTypes {
     id: string;
@@ -42,16 +44,10 @@ const DdMenuComponent: React.FunctionComponent = () => {
     return <>
         <aside className={String("dd-menu-component").toLocaleLowerCase()}>
             <div className={String("dd-menu-component-content-wrapper").toLocaleLowerCase()}>
-                <article>
-                    <div>
-                    <span>{"service here"}</span>
-                    <Link to={{
-                        pathname: "/dashboard"
-                    }}>{
-                        "service id"
-                    }</Link>
-                    </div>
-                </article>
+                <span onClick={(event) => {
+                    event.stopPropagation();
+                    CloseDropDownMenu();
+                }}><CgClose /></span>
                 <ul>
                     {
                         menuValues.map((element: MenuValuePropTypes) => (

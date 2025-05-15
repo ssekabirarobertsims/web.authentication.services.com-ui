@@ -1,5 +1,42 @@
-@media all and (min-width: 1020px) {
-    .device-warning-message-component {
-        display: none !important;
+@media all and (min-width: 320px) and (max-width: 420px) {
+    nav :is(aside)>article :where(ul) {
+        display: none;
     }
+    nav :is(aside)>a {
+  display: none;
+}
+nav :is(aside)>article :where(span) {
+  color: #fff;
+  font-weight: bolder;
+  font-size: .6em;
+}
+
+/*  */
+header {
+    min-height: 120vh;
+  /* gap: 2em; */
+}
+header article[class="animation-wrapper"]>img {
+  height: 15em;
+  width: 18em;
+}
+header article[class="header-content-wrapper"] :is(span) {
+  font-size: 2em;
+}
+header article[class="header-content-wrapper"] :is(p) {
+  font-size: .8em;
+}
+header article[class="header-content-wrapper"] a :is(button) {
+  height: 3em;
+  width: 12em;
+}
+
+/*  */
+footer {
+  min-height: 120vh;
+}
+
+footer article>aside {
+  min-height: 35vh
+}
 }

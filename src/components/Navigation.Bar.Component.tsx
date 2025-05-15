@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { GiAstronautHelmet } from "react-icons/gi";
 import DdMenuComponent from "./Dd.Menu.Component";
+import { BiMenu } from "react-icons/bi";
+import OpenDropDownMenu from "../functions/Open.Dd.Menu.Function";
 
 const NavigationBarComponent: React.FunctionComponent = () => {
   const buttonRef = useRef(null);
@@ -48,6 +50,14 @@ const NavigationBarComponent: React.FunctionComponent = () => {
               <li>Login</li>
             </Link>
           </ul>
+          <button type="button" className="dd-menu-button"
+            onClick={(event) => {
+              event.stopPropagation();
+              OpenDropDownMenu();
+            }}
+          >
+            <BiMenu />
+          </button>
         </article>
         <Link
           to={{

@@ -1,6 +1,5 @@
 import React from "react";
 import NavigationBarComponent from "../components/Navigation.Bar.Component";
-import FooterComponent from "../components/Footer.Component";
 import { useState } from "react";
 import ServiceLoginFunction from "../functions/Service.Login.Function";
 import Loader from "../components/Loader.Component";
@@ -85,11 +84,6 @@ const LoginServicePage: React.FunctionComponent = () => {
           </form>
         </article>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <FooterComponent />
     </>
   );
 };
